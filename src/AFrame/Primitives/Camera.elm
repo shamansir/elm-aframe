@@ -28,14 +28,14 @@ camera =
 -}
 far : Int -> Attribute msg
 far value =
-    attribute "far" (toString value)
+    attribute "far" (String.fromInt value)
 
 
 {-| Field of view (in degrees).
 -}
 fov : Int -> Attribute msg
 fov value =
-    attribute "fov" (toString value)
+    attribute "fov" (String.fromInt value)
 
 
 {-| Enable look controls.
@@ -44,14 +44,14 @@ fov value =
 -}
 lookControlsEnabled : Bool -> Attribute msg
 lookControlsEnabled value =
-    attribute "look-controls-enabled" (toLower (toString value))
+    attribute "look-controls-enabled" (toLower <| if value then "true" else "false")
 
 
 {-| Camera frustum near clipping plane.
 -}
 near : Float -> Attribute msg
 near value =
-    attribute "near" (toString value)
+    attribute "near" (String.fromFloat value)
 
 
 {-| Enable WASD controls for camera.
@@ -60,4 +60,4 @@ near value =
 -}
 wasdControlsEnabled : Bool -> Attribute msg
 wasdControlsEnabled value =
-    attribute "wasd-controls-enabled" (toLower (toString value))
+    attribute "wasd-controls-enabled" (toLower <| if value then "true" else "false")

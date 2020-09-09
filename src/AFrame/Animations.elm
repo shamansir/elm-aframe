@@ -60,7 +60,7 @@ attribute_ value =
 -}
 begin : Int -> Attribute msg
 begin value =
-    attribute "begin" (toString value)
+    attribute "begin" (String.fromInt value)
 
 
 {-| Direction of the animation (between from and to).
@@ -79,7 +79,7 @@ direction value =
 -}
 dur : Int -> Attribute msg
 dur value =
-    attribute "dur" (toString value)
+    attribute "dur" (String.fromInt value)
 
 
 {-| Easing function of the animation.

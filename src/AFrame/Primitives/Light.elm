@@ -39,10 +39,10 @@ light =
   Check https://aframe.io/docs/0.5.0/components/light.html#properties to get more information about the different kinds of lights
 -}
 type_ : Light -> Attribute msg
-type_ light =
+type_ light_ =
     let
         lightType =
-            case light of
+            case light_ of
                 Ambient ->
                     "ambient"
 
@@ -65,4 +65,4 @@ type_ light =
 -}
 intensity : Float -> Attribute msg
 intensity value =
-    attribute "intensity" <| toString value
+    attribute "intensity" <| String.fromFloat value

@@ -35,7 +35,7 @@ color value =
 {-| -}
 metalness : Float -> Attribute msg
 metalness value =
-    attribute "metalness" (toString value)
+    attribute "metalness" (String.fromFloat value)
 
 
 {-| -}
@@ -53,20 +53,20 @@ src value =
 {-| -}
 opacity : Float -> Attribute msg
 opacity value =
-    attribute "opacity" (toString value)
+    attribute "opacity" (String.fromFloat value)
 
 
 {-| -}
 roughness : Float -> Attribute msg
 roughness value =
-    attribute "roughness" (toString value)
+    attribute "roughness" (String.fromFloat value)
 
 
 {-| -}
 translate : Float -> Float -> Float -> Attribute msg
 translate x y z =
     [ x, y, z ]
-        |> List.map toString
+        |> List.map String.fromFloat
         |> List.intersperse " "
         |> String.concat
         |> attribute "translate"
@@ -75,7 +75,7 @@ translate x y z =
 {-| -}
 transparent : Bool -> Attribute msg
 transparent value =
-    attribute "transparent" (toLower (toString value))
+    attribute "transparent" (toLower <| if value then "true" else "false")
 
 
 
@@ -85,26 +85,26 @@ transparent value =
 {-| -}
 radius : Float -> Attribute msg
 radius value =
-    attribute "radius" (toString value)
+    attribute "radius" (String.fromFloat value)
 
 
 {-| -}
 radiusTop : Float -> Attribute msg
 radiusTop value =
-    attribute "radius-top" (toString value)
+    attribute "radius-top" (String.fromFloat value)
 
 
 {-| -}
 radiusBottom : Float -> Attribute msg
 radiusBottom value =
-    attribute "radius-bottom" (toString value)
+    attribute "radius-bottom" (String.fromFloat value)
 
 
 {-| -}
 position : Float -> Float -> Float -> Attribute msg
 position x y z =
     [ x, y, z ]
-        |> List.map toString
+        |> List.map String.fromFloat
         |> List.intersperse " "
         |> String.concat
         |> attribute "position"
@@ -114,7 +114,7 @@ position x y z =
 scale : Float -> Float -> Float -> Attribute msg
 scale x y z =
     [ x, y, z ]
-        |> List.map toString
+        |> List.map String.fromFloat
         |> List.intersperse " "
         |> String.concat
         |> attribute "scale"
@@ -124,7 +124,7 @@ scale x y z =
 rotation : Float -> Float -> Float -> Attribute msg
 rotation x y z =
     [ x, y, z ]
-        |> List.map toString
+        |> List.map String.fromFloat
         |> List.intersperse " "
         |> String.concat
         |> attribute "rotation"
@@ -133,25 +133,25 @@ rotation x y z =
 {-| -}
 height : Float -> Attribute msg
 height value =
-    attribute "height" (toString value)
+    attribute "height" (String.fromFloat value)
 
 
 {-| -}
 width : Float -> Attribute msg
 width value =
-    attribute "width" (toString value)
+    attribute "width" (String.fromFloat value)
 
 
 {-| -}
 depth : Int -> Attribute msg
 depth value =
-    attribute "depth" (toString value)
+    attribute "depth" (String.fromInt value)
 
 
 {-| -}
 segmentsRadial : Int -> Attribute msg
 segmentsRadial value =
-    attribute "segments-radial" (toString value)
+    attribute "segments-radial" (String.fromInt value)
 
 
 
@@ -161,26 +161,26 @@ segmentsRadial value =
 {-| -}
 angle : Float -> Attribute msg
 angle value =
-    attribute "angle" (toString value)
+    attribute "angle" (String.fromFloat value)
 
 
 {-| Amount the light dims along the distance of the light.
 -}
 decay : Float -> Attribute msg
 decay value =
-    attribute "decay" (toString value)
+    attribute "decay" (String.fromFloat value)
 
 
 {-| -}
 distance : Float -> Attribute msg
 distance value =
-    attribute "distance" (toString value)
+    attribute "distance" (String.fromFloat value)
 
 
 {-| -}
 exponent : Float -> Attribute msg
 exponent value =
-    attribute "exponent" (toString value)
+    attribute "exponent" (String.fromFloat value)
 
 
 {-| -}
@@ -192,13 +192,13 @@ groundColor value =
 {-| -}
 intensity : Float -> Attribute msg
 intensity value =
-    attribute "intensity" (toString value)
+    attribute "intensity" (String.fromFloat value)
 
 
 {-| -}
 type_ : Float -> Attribute msg
 type_ value =
-    attribute "type" (toString value)
+    attribute "type" (String.fromFloat value)
 
 
 {-| The vr-mode-ui component toggles UI such as an Enter VR button, compatibility modal, and orientation modal for mobile.

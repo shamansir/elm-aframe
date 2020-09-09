@@ -27,25 +27,25 @@ cursor =
 -}
 fuse : Bool -> Attribute msg
 fuse value =
-    attribute "fuse" (toLower (toString value))
+    attribute "fuse" (toLower <| if value then "true" else "false")
 
 
 {-| Maximum distance to check for intersections on entities for clicks.
 -}
 maxDistance : Int -> Attribute msg
 maxDistance value =
-    attribute "max-distance" (toString value)
+    attribute "max-distance" (String.fromInt value)
 
 
 {-| How long to wait (in milliseconds) to trigger a click event if fuse-based.
 -}
 timeout : Int -> Attribute msg
 timeout value =
-    attribute "timeout" (toString value)
+    attribute "timeout" (String.fromInt value)
 
 
 {-| Customize the raycasting pieces of the cursor.
 -}
 raycaster : String -> Attribute msg
 raycaster value =
-    attribute "raycaster" (toString value)
+    attribute "raycaster" value
