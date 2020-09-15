@@ -2,7 +2,7 @@
   "name": "elm-logo",
   "version": "1.0.0",
   "description": "This project is bootstrapped with [Create Elm App](https://github.com/halfzebra/create-elm-app).",
-  "main": "index.js",
+  "main": "app.js",
   "directories": {
     "test": "tests"
   },

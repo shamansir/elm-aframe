@@ -1,9 +1,20 @@
 {
     "type": "application",
-    "source-directories": [
-        "src"
-    ],
     "elm-version": "0.19.1",
+    "source-directories": [
+        "src",
+        "examples/elm-logo/src"
+    ],
+    "exposed-modules": [
+        "AFrame",
+        "AFrame.Animations",
+        "AFrame.Primitives",
+        "AFrame.Primitives.Attributes",
+        "AFrame.Primitives.Camera",
+        "AFrame.Primitives.Cursor",
+        "AFrame.Primitives.Light",
+        "AFrame.Extra.Physics"
+    ],
     "dependencies": {
         "direct": {
             "avh4/elm-color": "1.0.0",

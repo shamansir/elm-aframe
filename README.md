@@ -2,7 +2,7 @@
 
 This module brings declarative WebVR framework [A-Frame](https://aframe.io/) to Elm.
 
-:warning: Highly experimental, since it depends on external JavaScript library. 
+:warning: Highly experimental, since it depends on external JavaScript library.
 
 ## Tutorials
 
@@ -11,8 +11,8 @@ This module brings declarative WebVR framework [A-Frame](https://aframe.io/) to 
 ## Running examples
 
     cd examples/HelloWorld
-    elm-make Main.elm --output index.js
-    
+    elm-make Main.elm --output app.js
+
 ## Running webpack example
 The webpack configuration includes a webserver and will automatically reload your code when you make changes. Error message during build will be shown in the browser console.
 
@@ -20,5 +20,5 @@ The webpack configuration includes a webserver and will automatically reload you
     npm install
     elm-make
     npm run start
-    
-    
+
+

@@ -16,13 +16,17 @@
   "homepage": "https://github.com/halfzebra/elm-aframe#readme",
   "keywords": [],
   "license": "ISC",
-  "main": "index.js",
+  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/halfzebra/elm-aframe.git"
   },
   "scripts": {
-    "postinstall": "elm-package install -y",
-    "test": "elm-test"
+    "postinstall": "elm install",
+    "test": "elm-test",
+    "example:elm-logo": "elm-live --port 1111 examples/elm-logo/src/Main.elm --open --dir=./examples/elm-logo/ -- --output=./examples/elm-logo/app.js",
+    "example:HelloWorld": "elm-live --port 1111 examples/HelloWorld/Main.elm --open --dir=./examples/HelloWorld/ -- --output=./examples/HelloWorld/app.js",
+    "example:Logo": "elm-live --port 1111 examples/Logo/Main.elm --open --dir=./examples/Logo/ -- --output=./examples/Logo/app.js",
+    "example:LogoPhysics": "elm-live --port 1111 examples/LogoPhysics/Main.elm --open --dir=./examples/LogoPhysics/ -- --output=./examples/LogoPhysics/app.js"
   }
 }
