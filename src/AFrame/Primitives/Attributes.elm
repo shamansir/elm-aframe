@@ -1,4 +1,9 @@
-module AFrame.Primitives.Attributes exposing (..)
+module AFrame.Primitives.Attributes exposing
+    ( color, metalness, shader, src, opacity, roughness, translate, transparent
+    , radius, radiusTop, radiusBottom, position, scale, rotation, height, width, depth, segmentsRadial
+    , angle, decay, distance, exponent, groundColor, intensity, type_
+    , vrModeUi
+    )
 
 {-| A-Frame primitive attributes.
 

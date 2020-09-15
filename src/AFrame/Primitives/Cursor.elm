@@ -1,4 +1,8 @@
-module AFrame.Primitives.Cursor exposing (..)
+module AFrame.Primitives.Cursor
+    exposing
+        ( cursor
+        , fuse, maxDistance, timeout, raycaster
+        )
 
 {-| Cursor primitive.
 

@@ -1,4 +1,8 @@
-module AFrame.Primitives exposing (..)
+module AFrame.Primitives
+    exposing
+        ( box, circle, colladaModel, cone, cursor, curvedimage, cylinder, dodecahedron, gltfModel, icosahedron, image, link, objModel, octahedron, plane, ring, sky, sound, sphere, tetrahedron, text, torusKnot, torus, triangle, video, videosphere
+        , assets, assetItem
+        )
 
 {-| A-Frame primitives.
 

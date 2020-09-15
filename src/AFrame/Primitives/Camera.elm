@@ -1,4 +1,8 @@
-module AFrame.Primitives.Camera exposing (..)
+module AFrame.Primitives.Camera
+    exposing
+        ( camera, far, fov
+        , lookControlsEnabled, near, wasdControlsEnabled
+        )
 
 {-| Camera primitive.
 

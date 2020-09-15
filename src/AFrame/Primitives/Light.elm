@@ -1,4 +1,9 @@
-module AFrame.Primitives.Light exposing (..)
+module AFrame.Primitives.Light
+    exposing
+        ( light
+        , type_, intensity
+        , Light
+        )
 
 {-| Light primitive.
 
