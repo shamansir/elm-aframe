@@ -7,7 +7,7 @@ module AFrame.Primitives
 {-| A-Frame primitives.
 
 # Geometric primitives
-@docs box, circle, colladaModel, cone, cursor, curvedimage, cylinder, dodecahedron, gltfModel, icosahedron, image, link, objModel, octahedron, plane, ring, sky, sound, sphere, tetrahedron, text, torusKnot, torus, triangle, video, videosphere
+@docs box, circle, colladaModel, cone, cursor, curvedimage, cylinder, dodecahedron, gltfModel, icosahedron, link, objModel, octahedron, plane, ring, sound, sphere, tetrahedron, text, torusKnot, torus, triangle, video, videosphere
 
 # Scene primitives
 @docs sky
