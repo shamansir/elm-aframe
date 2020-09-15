@@ -3,7 +3,7 @@
     "name": "shamansir/elm-aframe",
     "license": "MIT",
     "summary": "Elm integration for A-Frame",
-    "version": "4.0.0",
+    "version": "1.0.0",
     "source-directories": [
         "src"
     ],
