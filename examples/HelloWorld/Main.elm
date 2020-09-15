@@ -1,7 +1,7 @@
 module Main exposing (..)
 
 import Html exposing (Html)
-import Color exposing (rgb)
+import Color exposing (rgb255)
 import AFrame exposing (scene, entity)
 import AFrame.Primitives exposing (sphere, box, cylinder, plane, sky)
 import AFrame.Primitives.Attributes
@@ -23,7 +23,7 @@ main =
         [ sphere
             [ position 0 1.25 -1
             , radius 1.25
-            , color (rgb 240 173 0)
+            , color (rgb255 240 173 0)
             ]
             []
         , box
@@ -32,21 +32,21 @@ main =
             , width 1
             , height 1.5
             , depth 1
-            , color (rgb 127 209 59)
+            , color (rgb255 127 209 59)
             ]
             []
         , cylinder
             [ position 1 0.75 1
             , radius 0.5
             , height 1.5
-            , color (rgb 6 181 204)
+            , color (rgb255 6 181 204)
             ]
             []
         , plane
             [ rotation -90 0 0
             , width 4
             , height 4
-            , color (rgb 90 99 120)
+            , color (rgb255 90 99 120)
             ]
             []
         , sky

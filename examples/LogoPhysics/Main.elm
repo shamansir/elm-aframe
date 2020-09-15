@@ -1,7 +1,7 @@
 module Main exposing (..)
 
 import Html exposing (Html)
-import Color exposing (rgb, Color)
+import Color exposing (rgb255, Color)
 import AFrame exposing (scene, entity)
 import AFrame.Primitives exposing (box, cylinder)
 import AFrame.Primitives.Attributes
@@ -28,22 +28,22 @@ heightFromPrismRadius radius =
 
 orange : Color
 orange =
-    rgb 240 173 0
+    rgb255 240 173 0
 
 
 grey : Color
 grey =
-    rgb 90 99 120
+    rgb255 90 99 120
 
 
 green : Color
 green =
-    rgb 127 209 59
+    rgb255 127 209 59
 
 
 blue : Color
 blue =
-    rgb 6 181 204
+    rgb255 6 181 204
 
 
 main : Html msg
