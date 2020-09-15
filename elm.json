@@ -1,20 +1,10 @@
 {
     "type": "application",
-    "elm-version": "0.19.1",
     "source-directories": [
         "src",
         "examples/elm-logo/src"
     ],
-    "exposed-modules": [
-        "AFrame",
-        "AFrame.Animations",
-        "AFrame.Primitives",
-        "AFrame.Primitives.Attributes",
-        "AFrame.Primitives.Camera",
-        "AFrame.Primitives.Cursor",
-        "AFrame.Primitives.Light",
-        "AFrame.Extra.Physics"
-    ],
+    "elm-version": "0.19.1",
     "dependencies": {
         "direct": {
             "avh4/elm-color": "1.0.0",
@@ -33,7 +23,11 @@
         }
     },
     "test-dependencies": {
-        "direct": {},
-        "indirect": {}
+        "direct": {
+            "elm-explorations/test": "1.2.2"
+        },
+        "indirect": {
+            "elm/random": "1.0.0"
+        }
     }
 }

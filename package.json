@@ -10,8 +10,7 @@
     "elm-test": "^0.18.6"
   },
   "directories": {
-    "example": "examples",
-    "test": "tests"
+    "example": "examples"
   },
   "homepage": "https://github.com/halfzebra/elm-aframe#readme",
   "keywords": [],
