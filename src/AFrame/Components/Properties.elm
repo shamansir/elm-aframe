@@ -14,8 +14,12 @@ import AFrame.Events as Events exposing (stringify)
 import AFrame.Events exposing (Event)
 import AFrame.Hand exposing (Hand)
 import AFrame.Hand as Hand exposing (toString)
+import AFrame.HandStyle exposing (HandStyle)
+import AFrame.HandStyle as HandStyle exposing (toString)
 import AFrame.Primitive exposing (Primitive)
 import AFrame.Primitive as Primitive exposing (toString)
+import AFrame.Primitives.Light exposing (Light)
+import AFrame.Primitives.Light as Light exposing (toString)
 
 
 type alias Property = ( String, String )
@@ -238,7 +242,7 @@ orientationOffset x y z = property "orientationOffset" <| vec3ToString x y z
 
 {- fog -}
 
--- `type_`, `near`, `far` are implemented
+-- `type_`, `near`, `far` are already implemented
 
 
 color : Color -> Property
@@ -374,3 +378,67 @@ vertexB x y z = property "vertexB" <| vec3ToString x y z
 
 vertexC : Float -> Float -> Float -> Property
 vertexC x y z = property "vertexC" <| vec3ToString x y z
+
+
+{- gtlf-model -}
+
+dracoDecoderPath : String -> Property
+dracoDecoderPath = property "dracoDecoderPath"
+
+
+{- hand-controls -}
+
+-- `color`, `hand` are already implemented
+
+handModelStyle : HandStyle -> Property
+handModelStyle = property "handModelStyle" << HandStyle.toString
+
+
+{- keyboard-shortcuts -}
+
+enterVr : Bool -> Property
+enterVr = property "enterVR" << boolToString
+
+
+{- laser-controls -}
+
+-- `hand`, `model` are already implemented
+
+defaultModelColor : Color -> Property
+defaultModelColor = property "defaultModelColor" << Color.toCssString
+
+
+{- light -}
+
+-- `type_`, `color` are already implemented
+
+lightType : Light -> Property
+lightType = type_ << Light.toString
+
+
+intensity : Float -> Property
+intensity = property "intensity" << String.fromFloat
+
+
+groundColor : Color -> Property
+groundColor = property "groundColor" << Color.toCssString
+
+
+decay : Float -> Property
+decay = property "decay" << String.fromFloat
+
+
+distance : Float -> Property
+distance = property "distance" << String.fromFloat
+
+
+angle : Float -> Property
+angle = property "angle" << String.fromFloat
+
+
+penumbra : Float -> Property
+penumbra = property "penumbra" << String.fromFloat
+
+
+target : String -> Property
+target = property "target"

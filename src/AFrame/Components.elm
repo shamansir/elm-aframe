@@ -60,6 +60,10 @@ animation_ : String -> List Property -> Attribute msg
 animation_ name = component <| "animation__" ++ name
 
 
+animationMixer : Attribute msg
+animationMixer = component "animation-mixer" []
+
+
 background : List Property -> Attribute msg
 background = component "background"
 
@@ -100,8 +104,8 @@ geometry : List Property -> Attribute msg
 geometry = component "geometry"
 
 
-gltfModel : List Property -> Attribute msg
-gltfModel = component "gltf-model"
+gltfModel : String -> Attribute msg
+gltfModel = attribute "gltf-model"
 
 
 handControls : List Property -> Attribute msg

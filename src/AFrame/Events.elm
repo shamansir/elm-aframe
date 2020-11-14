@@ -50,6 +50,36 @@ triggerDown = Event "triggerdown"
 triggerUp = Event "triggerup"
 
 
+
+gripDown = Event "gripdown"
+
+gripUp= Event "gripup"
+
+
+pointUp = Event "pointup"
+
+
+pointDown = Event "pointdown"
+
+
+thumbUp = Event "thumbup"
+
+
+thumbDown = Event "thumbdown"
+
+
+pointingStart = Event "pointingstart"
+
+
+pointingEnd = Event "pointingend"
+
+
+pistolStart = Event "pistolstart"
+
+
+pistolEnd = Event "pistolend"
+
+
 deviceOrientationPermissionGranted = Event "deviceorientationpermissiongranted"
 
 
@@ -57,6 +87,13 @@ deviceOrientationPermissionRejected = Event "eviceorientationpermissionrejected"
 
 
 deviceOrientationPermissionRequested = Event "deviceorientationpermissionrequested"
+
+
+
+modelLoaded = Event "model-loaded"
+
+
+modelError = Event "model-error"
 
 
 toString : Event -> String

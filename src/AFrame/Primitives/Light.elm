@@ -3,6 +3,8 @@ module AFrame.Primitives.Light
         ( light
         , type_, intensity
         , Light
+        , ambient, directional, hemisphere, point, spot
+        , toString
         )
 
 {-| Light primitive.
@@ -44,26 +46,8 @@ light =
   Check https://aframe.io/docs/0.5.0/components/light.html#properties to get more information about the different kinds of lights
 -}
 type_ : Light -> Attribute msg
-type_ light_ =
-    let
-        lightType =
-            case light_ of
-                Ambient ->
-                    "ambient"
-
-                Directional ->
-                    "directional"
-
-                Hemisphere ->
-                    "hemisphere"
-
-                Point ->
-                    "point"
-
-                Spot ->
-                    "spot"
-    in
-        attribute "type" lightType
+type_ =
+    attribute "type" << toString
 
 
 {-| Light strength.
@@ -71,3 +55,43 @@ type_ light_ =
 intensity : Float -> Attribute msg
 intensity value =
     attribute "intensity" <| String.fromFloat value
+
+
+ambient : Light
+ambient = Ambient
+
+
+directional : Light
+directional = Directional
+
+
+hemisphere : Light
+hemisphere = Hemisphere
+
+
+point : Light
+point = Point
+
+
+spot : Light
+spot = Spot
+
+
+
+toString : Light -> String
+toString light_ =
+    case light_ of
+        Ambient ->
+            "ambient"
+
+        Directional ->
+            "directional"
+
+        Hemisphere ->
+            "hemisphere"
+
+        Point ->
+            "point"
+
+        Spot ->
+            "spot"
