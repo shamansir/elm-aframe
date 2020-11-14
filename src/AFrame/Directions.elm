@@ -1,4 +1,4 @@
-module AFrame.Direction exposing (..)
+module AFrame.Directions exposing (..)
 
 
 type Direction

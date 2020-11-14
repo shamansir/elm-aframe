@@ -9,6 +9,33 @@ import AFrame.Components.Properties exposing (Property, toAttribute, toString)
 import AFrame.Primitives.Attributes as AF exposing (position)
 
 
+{-|
+
+    entity
+        [ geometry [ primitive box ]
+        , material [ color Color.red ]
+        , animation_ "mouseenter"
+            [ property_ "components.material.material.color"
+            , type_ "color"
+            , toColor Color.blue
+            , startEvents [ mouseEnter ]
+            , dur 500
+            ]
+        , animation_ "mouseleave"
+            [ property_ "components.material.material.color"
+            , type_ "color"
+            , toColor Color.red
+            , startEvents [ mouseLeave ]
+            , dur 500
+            ]
+        , animation [ property_ "rotation" ]
+        , animation_ "2" [ property_ "position" ]
+        , animation_ "color" [ property_ "color" ]
+        ]
+        []
+-}
+
+
 component : String -> List Property -> Attribute msg
 component =
     toAttribute
