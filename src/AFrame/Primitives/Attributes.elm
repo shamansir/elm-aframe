@@ -148,9 +148,9 @@ width value =
 
 
 {-| -}
-depth : Int -> Attribute msg
+depth : Float -> Attribute msg
 depth value =
-    attribute "depth" (String.fromInt value)
+    attribute "depth" (String.fromFloat value)
 
 
 {-| -}

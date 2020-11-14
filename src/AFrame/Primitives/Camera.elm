@@ -30,16 +30,16 @@ camera =
 
 {-| Camera frustum far clipping plane.
 -}
-far : Int -> Attribute msg
+far : Float -> Attribute msg
 far value =
-    attribute "far" (String.fromInt value)
+    attribute "far" (String.fromFloat value)
 
 
 {-| Field of view (in degrees).
 -}
-fov : Int -> Attribute msg
+fov : Float -> Attribute msg
 fov value =
-    attribute "fov" (String.fromInt value)
+    attribute "fov" (String.fromFloat value)
 
 
 {-| Enable look controls.

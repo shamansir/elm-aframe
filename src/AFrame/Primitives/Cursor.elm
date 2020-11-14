@@ -36,9 +36,9 @@ fuse value =
 
 {-| Maximum distance to check for intersections on entities for clicks.
 -}
-maxDistance : Int -> Attribute msg
+maxDistance : Float -> Attribute msg
 maxDistance value =
-    attribute "max-distance" (String.fromInt value)
+    attribute "max-distance" (String.fromFloat value)
 
 
 {-| How long to wait (in milliseconds) to trigger a click event if fuse-based.

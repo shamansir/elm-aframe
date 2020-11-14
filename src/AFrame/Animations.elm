@@ -12,6 +12,7 @@ module AFrame.Animations
         , to
         )
 
+
 {-| This module provides a set of functions for declaring A-Frame animations.
 
 # Definition
