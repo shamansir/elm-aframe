@@ -29,6 +29,10 @@ animation : List Property -> Attribute msg
 animation = component "animation"
 
 
+animation_ : String -> List Property -> Attribute msg
+animation_ name = component <| "animation__" ++ name
+
+
 background : List Property -> Attribute msg
 background = component "background"
 
