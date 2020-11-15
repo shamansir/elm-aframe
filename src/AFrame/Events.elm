@@ -60,14 +60,16 @@ trackPadTouchStart = Event "trackpadtouchstart"
 trackPadTouchEnd = Event "trackpadtouchend"
 
 
+{-| Trigger changed. -}
 triggerChanged = Event "triggerchanged"
 
 
+{-| Trigger pressed. -}
 triggerDown = Event "triggerdown"
 
 
+{-| Trigger released. -}
 triggerUp = Event "triggerup"
-
 
 
 gripDown = Event "gripdown"

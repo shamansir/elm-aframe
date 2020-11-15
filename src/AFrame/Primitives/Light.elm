@@ -2,9 +2,6 @@ module AFrame.Primitives.Light
     exposing
         ( light
         , type_, intensity
-        , Light
-        , ambient, directional, hemisphere, point, spot
-        , toString
         )
 
 {-| Light primitive.
@@ -24,14 +21,9 @@ import Html exposing (node, Html, Attribute)
 import Html.Attributes exposing (attribute)
 
 
-{-| Different kinds of lights
--}
-type Light
-    = Ambient
-    | Directional
-    | Hemisphere
-    | Point
-    | Spot
+import AFrame.Light exposing (Light)
+import AFrame.Light as Light exposing (toString)
+
 
 
 {-| The light primitive adjusts the lighting setup of the scene.
@@ -47,7 +39,7 @@ light =
 -}
 type_ : Light -> Attribute msg
 type_ =
-    attribute "type" << toString
+    attribute "type" << Light.toString
 
 
 {-| Light strength.
@@ -57,41 +49,3 @@ intensity value =
     attribute "intensity" <| String.fromFloat value
 
 
-ambient : Light
-ambient = Ambient
-
-
-directional : Light
-directional = Directional
-
-
-hemisphere : Light
-hemisphere = Hemisphere
-
-
-point : Light
-point = Point
-
-
-spot : Light
-spot = Spot
-
-
-
-toString : Light -> String
-toString light_ =
-    case light_ of
-        Ambient ->
-            "ambient"
-
-        Directional ->
-            "directional"
-
-        Hemisphere ->
-            "hemisphere"
-
-        Point ->
-            "point"
-
-        Spot ->
-            "spot"

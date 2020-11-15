@@ -14,7 +14,7 @@ import AFrame.Util exposing (..)
 
 {-| Whether the arm model is used for positional data.
 
-`daydream-controls`
+`daydream-controls`, `gearvr-controls`
 
 Default : `true`
 -}
@@ -24,7 +24,7 @@ armModel = property "armModel" << boolToString
 
 {-| Button colors when not pressed.
 
-`daydream-controls`
+`daydream-controls`, `gearvr-controls`
 
 Default : `#000000`
 -}
@@ -34,7 +34,7 @@ buttonColor = property "buttonColor" << Color.toCssString
 
 {-| Button colors when touched.
 
-`daydream-controls`
+`daydream-controls`, `gearvr-controls`
 
 Default : `#777777`
 -}
@@ -44,7 +44,7 @@ buttonTouchedColor = property "buttonTouchedColor" << Color.toCssString
 
 {-| Button colors when pressed and active.
 
-`daydream-controls`
+`daydream-controls`, `gearvr-controls`
 
 Default : `#FFFFFF`
 -}
@@ -54,7 +54,7 @@ buttonHighlightColor = property "buttonHighlightColor" << Color.toCssString
 
 {-| Set hand that will be tracked (i.e., `right`, `left`).
 
-`daydream-controls`
+`daydream-controls`, `gearvr-controls`
 
 -}
 hand : Hand -> Property
@@ -63,7 +63,7 @@ hand = property "hand" << Hand.toString
 
 {-| Whether the Daydream controller model is loaded.
 
-`daydream-controls`
+`daydream-controls`, `gearvr-controls`
 
 Default : `true`
 -}
@@ -73,7 +73,7 @@ model = property "model" << boolToString
 
 {-| Offset to apply to model orientation.
 
-`daydream-controls`
+`daydream-controls`, `gearvr-controls`
 
 Default: `x: 0, y: 0, z: 0`
 -}

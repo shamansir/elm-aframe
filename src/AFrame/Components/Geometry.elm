@@ -1,32 +1,62 @@
 module AFrame.Components.Geometry exposing (..)
 
 
+import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Components.Primitives exposing (Primitive)
+import AFrame.Components.Primitives as Primitive exposing (toString)
+import AFrame.Util exposing (..)
+
+import AFrame.Components.Geometry.Box as G exposing (..)
+import AFrame.Components.Geometry.Ring as G exposing (..)
+
+
+{-| Transform geometry into a BufferGeometry to reduce memory usage at the cost of being harder to manipulate.
+
+Default : `true`
+-}
 buffer : Bool -> Property
 buffer = property "buffer" << boolToString
 
 
+{-| Name of a geometry. Determines the geometry type and what other properties are available.
+
+Default : `box`
+-}
 primitive : Primitive -> Property
 primitive = property "primitive" << Primitive.toString
 
 
+{-| Disable retrieving the shared geometry object from the cache.
+
+Default : `false`
+-}
 skipCache : Bool -> Property
 skipCache = property "skipCache" << boolToString
 
 
+{-| -}
 width : Float -> Property
-width = property "width" << String.fromFloat
+width = G.width
 
 
+{-| -}
 height : Float -> Property
-height = property "height" << String.fromFloat
+height = G.height
 
 
+{-| -}
 depth : Float -> Property
-depth = property "depth" << String.fromFloat
+depth = G.depth
 
 
-openEnded : Bool -> Property
-openEnded = property "openEnded" << boolToString
+{-| -}
+radius : Float -> Property
+radius = G.radius
+
+
+
+
+
 
 
 arc : Float -> Property
@@ -41,16 +71,8 @@ q : Float -> Property
 q = property "q" << String.fromFloat
 
 
-radius : Float -> Property
-radius = property "radius" << String.fromFloat
 
 
-radiusBottom : Float -> Property
-radiusBottom = property "radiusBottom" << String.fromFloat
-
-
-radiusTop : Float -> Property
-radiusTop = property "radiusTop" << String.fromFloat
 
 
 radiusInner : Float -> Property
@@ -65,24 +87,11 @@ radiusTubular : Float -> Property
 radiusTubular = property "radiusTubular" << String.fromFloat
 
 
-segments : Int -> Property
-segments = property "segments" << String.fromInt
 
 
-segmentsDepth : Int -> Property
-segmentsDepth = property "segmentsDepth" << String.fromInt
 
 
-segmentsWidth : Int -> Property
-segmentsWidth = property "segmentsWidth" << String.fromInt
 
-
-segmentsHeight : Int -> Property
-segmentsHeight = property "segmentsHeight" << String.fromInt
-
-
-segmentsRadial : Int -> Property
-segmentsRadial = property "segmentsRadial" << String.fromInt
 
 
 segmentsTheta : Int -> Property
@@ -105,12 +114,7 @@ phiLength : Float -> Property
 phiLength = property "phiLength" << String.fromFloat
 
 
-thetaStart : Float -> Property
-thetaStart = property "thetaStart" << String.fromFloat
 
-
-thetaLength : Float -> Property
-thetaLength = property "thetaLength" << String.fromFloat
 
 
 vertexA : Float -> Float -> Float -> Property
