@@ -5,8 +5,10 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 
 
-import AFrame.Components.Properties exposing (Property, toAttribute, toString)
+import AFrame.Components.Properties exposing (Property, toString)
+import AFrame.Components.Properties as Properties exposing (toString)
 import AFrame.Primitives.Attributes as AF exposing (position)
+import AFrame.Util exposing (boolToString)
 
 
 {-|
@@ -37,8 +39,8 @@ import AFrame.Primitives.Attributes as AF exposing (position)
 
 
 component : String -> List Property -> Attribute msg
-component =
-    toAttribute
+component name =
+    attribute name << Properties.toString
 
 
 node : String -> List Property -> Html msg
@@ -73,7 +75,7 @@ camera = component "camera"
 
 
 cursor : List Property -> Attribute msg
-cursor = component "camera"
+cursor = component "cursor"
 
 
 daydreamControls : List Property -> Attribute msg
@@ -81,7 +83,7 @@ daydreamControls = component "daydream-controls"
 
 
 debug : Attribute msg
-debug = component "daydream-controls" []
+debug = component "debug" []
 
 
 deviceOrientationPersmissionUi : List Property -> Attribute msg
@@ -204,10 +206,8 @@ trackedControls = component "tracked-controls"
 
 
 visible : Bool -> Attribute msg
-visible v =
-    attribute "visible" <| case v of
-        True -> "true"
-        False -> "false"
+visible =
+    attribute "visible" << boolToString
 
 
 viveControls : List Property -> Attribute msg

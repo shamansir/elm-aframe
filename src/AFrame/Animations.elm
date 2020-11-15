@@ -8,7 +8,8 @@ module AFrame.Animations
         , easing
         , fill
         , from
-        , repeat
+        , loop
+        , loopForever
         , to
         )
 
@@ -25,6 +26,10 @@ module AFrame.Animations
 
 import Html exposing (node, Html, Attribute)
 import Html.Attributes exposing (attribute)
+
+
+import AFrame.Fills exposing (Fill)
+import AFrame.Fills as Fill exposing (toString)
 
 
 {-| Animation declaration.
@@ -95,11 +100,11 @@ easing value =
 {-| Determines effect of animation when not actively in play.
     One of backwards, both, forwards, none.
 
-    animation [ fill "rotation" ] []
+    animation [ fill forwards ] []
 -}
-fill : String -> Attribute msg
-fill value =
-    attribute "fill" value
+fill : Fill -> Attribute msg
+fill =
+    attribute "fill" << Fill.toString
 
 
 {-| Starting value.
@@ -111,13 +116,23 @@ from value =
     attribute "from" value
 
 
-{-| Repeat count or indefinite.
+{-| Repeat count.
 
-    animation [ repeat 5000 ] []
+    animation [ loop 5000 ] []
 -}
-repeat : Int -> Attribute msg
-repeat value =
-    attribute "begin" (String.fromInt value)
+loop : Int -> Attribute msg
+loop value =
+    attribute "loop" (String.fromInt value)
+
+
+
+{-| Loop infinitely
+
+    animation [ loopForever ] []
+-}
+loopForever : Attribute msg
+loopForever =
+    attribute "loop" "true"
 
 
 {-| Ending value. Must be specified.

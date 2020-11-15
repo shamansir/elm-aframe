@@ -1,4 +1,4 @@
-module AFrame.Primitive exposing (..)
+module AFrame.Components.Primitives exposing (..)
 
 
 type Primitive = Primitive String
