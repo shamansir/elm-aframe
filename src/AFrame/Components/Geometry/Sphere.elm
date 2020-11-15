@@ -1,7 +1,7 @@
 module AFrame.Components.Geometry.Sphere exposing (..)
 
+
 import AFrame.Components.Properties exposing (Property, property)
-import AFrame.Util exposing (..)
 
 
 {-| Radius (in meters) of the sphere.

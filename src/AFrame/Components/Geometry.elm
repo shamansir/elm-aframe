@@ -7,7 +7,13 @@ import AFrame.Components.Primitives as Primitive exposing (toString)
 import AFrame.Util exposing (..)
 
 import AFrame.Components.Geometry.Box as G exposing (..)
-import AFrame.Components.Geometry.Ring as G exposing (..)
+import AFrame.Components.Geometry.Circle as G exposing (..)
+import AFrame.Components.Geometry.Cone as GC exposing (..)
+import AFrame.Components.Geometry.Ring as GR exposing (..)
+import AFrame.Components.Geometry.Sphere as GS exposing (..)
+import AFrame.Components.Geometry.Torus as GT exposing (..)
+import AFrame.Components.Geometry.TorusKnot as GTK exposing (..)
+import AFrame.Components.Geometry.Triangle as G exposing (..)
 
 
 {-| Transform geometry into a BufferGeometry to reduce memory usage at the cost of being harder to manipulate.
@@ -35,6 +41,11 @@ skipCache = property "skipCache" << boolToString
 
 
 {-| -}
+arc : Float -> Property
+arc = GT.arc
+
+
+{-| -}
 width : Float -> Property
 width = G.width
 
@@ -50,80 +61,110 @@ depth = G.depth
 
 
 {-| -}
+p : Float -> Property
+p = GTK.p
+
+
+{-| -}
+q : Float -> Property
+q = GTK.q
+
+
+{-| -}
+openEnded : Bool -> Property
+openEnded = GC.openEnded
+
+
+{-| -}
+phiStart : Float -> Property
+phiStart = GS.phiStart
+
+
+{-| -}
+phiLength : Float -> Property
+phiLength = GS.phiLength
+
+
+{-| -}
 radius : Float -> Property
 radius = G.radius
 
 
-
-
-
-
-
-arc : Float -> Property
-arc = property "arc" << String.fromFloat
-
-
-p : Float -> Property
-p = property "p" << String.fromFloat
-
-
-q : Float -> Property
-q = property "q" << String.fromFloat
-
-
-
-
-
-
+{-| -}
 radiusInner : Float -> Property
-radiusInner = property "radiusInner" << String.fromFloat
+radiusInner = GR.radiusInner
 
 
+{-| -}
 radiusOuter : Float -> Property
-radiusOuter = property "radiusOuter" << String.fromFloat
+radiusOuter = GR.radiusOuter
 
 
+{-| -}
 radiusTubular : Float -> Property
-radiusTubular = property "radiusTubular" << String.fromFloat
+radiusTubular = GT.radiusTubular
 
 
+{-| -}
+segments : Int -> Property
+segments = G.segments
 
 
+{-| -}
+segmentsWidth : Int -> Property
+segmentsWidth = G.segmentsWidth
 
 
+{-| -}
+segmentsHeight : Int -> Property
+segmentsHeight = G.segmentsHeight
 
 
+{-| -}
+segmentsDepth : Int -> Property
+segmentsDepth = G.segmentsDepth
 
-segmentsTheta : Int -> Property
-segmentsTheta = property "segmentsTheta" << String.fromInt
+
+{-| -}
+segmentsRadial : Int -> Property
+segmentsRadial = GC.segmentsRadial
 
 
+{-| -}
 segmentsTubular : Int -> Property
-segmentsTubular = property "segmentsRadial" << String.fromInt
+segmentsTubular = GT.segmentsTubular
 
 
+{-| -}
+segmentsTheta : Int -> Property
+segmentsTheta = GR.segmentsTheta
+
+
+{-| -}
 segmentsPhi : Int -> Property
-segmentsPhi = property "segmentsPhi" << String.fromInt
+segmentsPhi = GR.segmentsPhi
 
 
-phiStart : Float -> Property
-phiStart = property "phiStart" << String.fromFloat
+{-| -}
+thetaStart : Float -> Property
+thetaStart = G.thetaStart
 
 
-phiLength : Float -> Property
-phiLength = property "phiLength" << String.fromFloat
+{-| -}
+thetaLength : Float -> Property
+thetaLength = G.thetaLength
 
 
-
-
-
+{-| -}
 vertexA : Float -> Float -> Float -> Property
-vertexA x y z = property "vertexA" <| vec3ToString x y z
+vertexA = G.vertexA
 
 
+{-| -}
 vertexB : Float -> Float -> Float -> Property
-vertexB x y z = property "vertexB" <| vec3ToString x y z
+vertexB = G.vertexB
 
 
+{-| -}
 vertexC : Float -> Float -> Float -> Property
-vertexC x y z = property "vertexC" <| vec3ToString x y z
+vertexC = G.vertexC
