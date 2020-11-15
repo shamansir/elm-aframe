@@ -10,10 +10,49 @@ import AFrame.Variants.Shadow as Shadow exposing (toString)
 
 {-| Defines shadow map type (`basic`, `pcf`, `pcfsoft`) with varying appearance and performance characteristics.
 
-Default : `directional`
+Default : `pcf` (_percentage closer filtering_)
 -}
 type_ : Shadow -> Property
 type_ = property "type" << Shadow.toString
+
+
+{-| Whether the entity casts shadows onto the surrounding scene.
+
+Default : `true`
+-}
+cast : Bool -> Property
+cast = property "cast" << boolToString
+
+
+{-| Whether the entity receives shadows from the surrounding scene.
+
+Default : `true`
+-}
+receive : Bool -> Property
+receive = property "receive" << boolToString
+
+
+{- Scene properties -}
+
+
+{-| Whether to disable shadows globally, even if there is a shadow component and a light with `castShadow: true` enabled.
+
+Default : `true`
+-}
+enabled : Bool -> Property
+enabled = property "enabled" << boolToString
+
+
+{-| Whether to dynamically update the shadow map every frame. Disable and manually update by setting `renderer.shadowMap.needsUpdate = true` for best performance. Calculating shadow maps is expensive.
+
+Default : `true`
+-}
+autoUpdate : Bool -> Property
+autoUpdate = property "autoUpdate" << boolToString
+
+
+
+{- Light properties -}
 
 
 {-| Offset depth when deciding whether a surface is in shadow. Tiny adjustments here (in the order of +/-0.0001) may reduce artifacts in shadows.
