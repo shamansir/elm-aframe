@@ -1,4 +1,4 @@
-module AFrame.Components.GltfModel exposing (..)
+module AFrame.Components.Model.Gltf exposing (..)
 
 
 import AFrame.Properties exposing (Property, property)

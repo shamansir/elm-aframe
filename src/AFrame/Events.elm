@@ -12,6 +12,7 @@ stringify : List Event -> String
 stringify = List.map toString >> String.join ","
 
 
+
 {- animation -}
 
 
@@ -54,53 +55,240 @@ mouseLeave = Event "mouseleave"
 mouseUp = Event "mouseup"
 
 
-{- daydream-controls + gearvr-controls -}
+type ControlSubject
+    = Trackpad
+    | Trigger
+    | Thumbstick
+    | Grip
+    | AButton
+    | BButton
+    | XButton
+    | YButton
+    | Surface
 
 
-{-| Trackpad changed. -}
-trackPadChanged = Event "trackpadchanged"
+
+type ControlAction
+    = Down
+    | Up
+    | Changed
+    | TouchEnd
+    | TouchStart
+    | Moved
 
 
-{-| Trackpad pressed. -}
-trackPadDown = Event "trackpaddown"
+
+control : ControlSubject -> ControlAction -> Event
+control subj action =
+    Event
+    <| (case subj of
+        Trackpad -> "trackpad"
+        Trigger -> "trigger"
+        Thumbstick -> "thumbstick"
+        Grip -> "grip"
+        AButton -> "abutton"
+        BButton -> "bbutton"
+        XButton -> "xbutton"
+        YButton -> "ybutton"
+        Surface -> "surface"
+    )
+    ++ (case action of
+        Down -> "down"
+        Up -> "up"
+        Changed -> "changed"
+        TouchStart -> "touchstart"
+        TouchEnd -> "touchend"
+        Moved -> "moved"
+    )
 
 
-{-| Trackpad released. -}
-trackPadUp = Event "trackpadup"
+{-| -}
+trackPadDown = control Trackpad Down
 
 
-{-| Trackpad touched. -}
-trackPadTouchStart = Event "trackpadtouchstart"
+{-| -}
+trackPadUp = control Trackpad Up
 
 
-{-| Trackpad not touched. -}
-trackPadTouchEnd = Event "trackpadtouchend"
+{-| -}
+trackPadTouchStart = control Trackpad TouchStart
 
 
-{- gearvr-controls -}
+{-| -}
+trackPadTouchEnd = control Trackpad TouchEnd
 
 
-{-| Trigger changed. -}
-triggerChanged = Event "triggerchanged"
+{-| -}
+trackPadChanged = control Trackpad Changed
 
 
-{-| Trigger pressed. -}
-triggerDown = Event "triggerdown"
+{-| -}
+trackPadMoved = control Trackpad Moved
 
 
-{-| Trigger released. -}
-triggerUp = Event "triggerup"
+{-| -}
+triggerDown = control Trigger Down
+
+
+{-| -}
+triggerUp = control Trigger Up
+
+
+{-| -}
+triggerTouchStart = control Trigger TouchStart
+
+
+{-| -}
+triggerTouchEnd = control Trigger TouchEnd
+
+
+{-| -}
+triggerChanged = control Trigger Changed
+
+
+{-| -}
+thumbstickDown = control Thumbstick Down
+
+
+{-| -}
+thumbstickUp = control Thumbstick Up
+
+
+{-| -}
+thumbstickTouchStart = control Thumbstick TouchStart
+
+
+{-| -}
+thumbstickTouchEnd = control Thumbstick TouchEnd
+
+
+{-| -}
+thumbstickChanged = control Thumbstick Changed
+
+
+{-| -}
+aButtonDown = control AButton Down
+
+
+{-| -}
+aButtonUp = control AButton Up
+
+
+{-| -}
+aButtonTouchStart = control AButton TouchStart
+
+
+{-| -}
+aButtonTouchEnd = control AButton TouchEnd
+
+
+{-| -}
+aButtonChanged = control AButton Changed
+
+
+{-| -}
+bButtonDown = control BButton Down
+
+
+{-| -}
+bButtonUp = control BButton Up
+
+
+{-| -}
+bButtonTouchStart = control BButton TouchStart
+
+
+{-| -}
+bButtonTouchEnd = control BButton TouchEnd
+
+
+{-| -}
+bButtonChanged = control BButton Changed
+
+
+{-| -}
+xButtonDown = control XButton Down
+
+
+{-| -}
+xButtonUp = control XButton Up
+
+
+{-| -}
+xButtonTouchStart = control XButton TouchStart
+
+
+{-| -}
+xButtonTouchEnd = control XButton TouchEnd
+
+
+{-| -}
+xButtonChanged = control XButton Changed
+
+
+{-| -}
+yButtonDown = control YButton Down
+
+
+{-| -}
+yButtonUp = control YButton Up
+
+
+{-| -}
+yButtonTouchStart = control YButton TouchStart
+
+
+{-| -}
+yButtonTouchEnd = control YButton TouchEnd
+
+
+{-| -}
+yButtonChanged = control YButton Changed
+
+
+{-| -}
+surfaceDown = control Surface Down
+
+
+{-| -}
+surfaceUp = control Surface Up
+
+
+{-| -}
+surfaceTouchStart = control Surface TouchStart
+
+
+{-| -}
+surfaceTouchEnd = control Surface TouchEnd
+
+
+{-| -}
+surfaceChanged = control Surface Changed
+
+
 
 
 {- hand-controls -}
 
 
 {-| The hand is closed into a fist without thumb raised. -}
-gripDown = Event "gripdown"
+gripDown = control Grip Down
 
 
 {-| The hand is no longer closed into a fist without thumb raised. -}
-gripUp= Event "gripup"
+gripUp = control Grip Up
+
+
+{-| -}
+gripTouchStart = control Grip TouchStart
+
+
+{-| -}
+gripTouchEnd = control Grip TouchEnd
+
+
+{-| -}
+gripChanged = control Grip Changed
 
 
 {-| The hand is touching or pressing the trigger only. -}
@@ -150,7 +338,7 @@ deviceOrientationPermissionRejected = Event "deviceorientationpermissionrejected
 deviceOrientationPermissionRequested = Event "deviceorientationpermissionrequested"
 
 
-{- gltf-model -}
+{- gltf-model, obj-model -}
 
 
 {-| glTF model has been loaded into the scene. -}
