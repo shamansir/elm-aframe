@@ -1,7 +1,9 @@
 module AFrame.Components.Keyboard exposing (..)
 
 
-{- keyboard-shortcuts -}
+import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Util exposing (..)
+
 
 enterVr : Bool -> Property
 enterVr = property "enterVR" << boolToString

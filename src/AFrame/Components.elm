@@ -130,6 +130,10 @@ line : List Property -> Attribute msg
 line = component "line"
 
 
+line_ : String -> List Property -> Attribute msg
+line_ name = component <| "line__" ++ name
+
+
 link : List Property -> Attribute msg
 link = component "link"
 

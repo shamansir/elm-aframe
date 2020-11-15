@@ -4,6 +4,9 @@ module AFrame.Events exposing (..)
 type Event = Event String
 
 
+{- animation -}
+
+
 {-| Animation began. Event detail contains `name` of animation. -}
 animationBegin = Event "animationbegin"
 
@@ -14,6 +17,9 @@ animationComplete = Event "animationcomplete"
 
 {-| Animation completed if animation has an ID (e.g., `animation_ "click"`). -}
 animationCompleteWithId = Event "animationcomplete__"
+
+
+{- cursor -}
 
 
 {-| Emitted on both cursor and intersected entity if a currently intersected entity is clicked (whether by mouse or by fuse). -}
@@ -36,8 +42,11 @@ mouseEnter = Event "mouseenter"
 mouseLeave = Event "mouseleave"
 
 
-{-| 	Emitted on both cursor and intersected entity (if any) on mouseup on the canvas element. -}
+{-| Emitted on both cursor and intersected entity (if any) on mouseup on the canvas element. -}
 mouseUp = Event "mouseup"
+
+
+{- daydream-controls + gearvr-controls -}
 
 
 {-| Trackpad changed. -}
@@ -60,6 +69,9 @@ trackPadTouchStart = Event "trackpadtouchstart"
 trackPadTouchEnd = Event "trackpadtouchend"
 
 
+{- gearvr-controls -}
+
+
 {-| Trigger changed. -}
 triggerChanged = Event "triggerchanged"
 
@@ -72,32 +84,46 @@ triggerDown = Event "triggerdown"
 triggerUp = Event "triggerup"
 
 
+{- hand-controls -}
+
+
+{-| The hand is closed into a fist without thumb raised. -}
 gripDown = Event "gripdown"
 
+
+{-| The hand is no longer closed into a fist without thumb raised. -}
 gripUp= Event "gripup"
 
 
+{-| The hand is touching or pressing the trigger only. -}
 pointUp = Event "pointup"
 
 
+{-| The hand is no longer touching or pressing the trigger only. -}
 pointDown = Event "pointdown"
 
 
+{-| The hand is closed into a fist with thumb raised. -}
 thumbUp = Event "thumbup"
 
 
+{-| The hand is no longer closed into a fist with thumb raised. -}
 thumbDown = Event "thumbdown"
 
 
+{-| The hand is pointing with index finger without thumb raised. -}
 pointingStart = Event "pointingstart"
 
 
+{-| The hand is no longer pointing without thumb raised. -}
 pointingEnd = Event "pointingend"
 
 
+{-| The hand is pointing with index finger and thumb raised. -}
 pistolStart = Event "pistolstart"
 
 
+{-| The hand is no longer pointing with thumb raised. -}
 pistolEnd = Event "pistolend"
 
 

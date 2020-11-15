@@ -12,6 +12,14 @@ import AFrame.Components.Properties exposing (Property, property)
 import AFrame.Util exposing (..)
 
 
+{-| Set hand that will be tracked (i.e., `right`, `left`).
+
+`daydream-controls`, `gearvr-controls`, `hand-controls`, `laser-controls`
+-}
+hand : Hand -> Property
+hand = property "hand" << Hand.toString
+
+
 {-| Whether the arm model is used for positional data.
 
 `daydream-controls`, `gearvr-controls`
@@ -20,6 +28,16 @@ Default : `true`
 -}
 armModel : Bool -> Property
 armModel = property "armModel" << boolToString
+
+
+{-| Color of hand material.
+
+`hand-controls`
+
+Default : `white`
+-}
+color : Color -> Property
+color = property "color" << Color.toCssString
 
 
 {-| Button colors when not pressed.
@@ -52,18 +70,10 @@ buttonHighlightColor : Color -> Property
 buttonHighlightColor = property "buttonHighlightColor" << Color.toCssString
 
 
-{-| Set hand that will be tracked (i.e., `right`, `left`).
-
-`daydream-controls`, `gearvr-controls`
-
--}
-hand : Hand -> Property
-hand = property "hand" << Hand.toString
-
 
 {-| Whether the Daydream controller model is loaded.
 
-`daydream-controls`, `gearvr-controls`
+`daydream-controls`, `gearvr-controls`, `laser-controls`
 
 Default : `true`
 -}
@@ -80,18 +90,23 @@ Default: `x: 0, y: 0, z: 0`
 orientationOffset : Float -> Float -> Float -> Property
 orientationOffset x y z = property "orientationOffset" <| vec3ToString x y z
 
-{- hand-controls -}
 
--- `color`, `hand` are already implemented
+{-| Style of the hand 3D model loaded. Can be `lowPoly`, `highPoly` or `toon`.
+
+`hand-controls`
+
+Default: `lowPoly`
+-}
 
 handModelStyle : HandStyle -> Property
 handModelStyle = property "handModelStyle" << HandStyle.toString
 
 
 
-{- laser-controls -}
+{-| Color for the default controller model.
 
--- `hand`, `model` are already implemented
+`laser-controls`
+-}
 
 defaultModelColor : Color -> Property
 defaultModelColor = property "defaultModelColor" << Color.toCssString
