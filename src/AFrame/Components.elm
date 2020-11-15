@@ -11,6 +11,9 @@ import AFrame.Primitives.Attributes as AF exposing (position)
 import AFrame.Util exposing (boolToString)
 
 
+type alias Component msg = Attribute msg
+
+
 {-|
 
     entity
@@ -38,7 +41,7 @@ import AFrame.Util exposing (boolToString)
 -}
 
 
-component : String -> List Property -> Attribute msg
+component : String -> List Property -> Component msg
 component name =
     attribute name << Properties.toString
 
@@ -54,181 +57,181 @@ node_ name props =
         (List.map (\(n, v) -> attribute n v) props)
 
 
-animation : List Property -> Attribute msg
+animation : List Property -> Component msg
 animation = component "animation"
 
 
-animation_ : String -> List Property -> Attribute msg
+animation_ : String -> List Property -> Component msg
 animation_ name = component <| "animation__" ++ name
 
 
-animationMixer : Attribute msg
+animationMixer : Component msg
 animationMixer = component "animation-mixer" []
 
 
-background : List Property -> Attribute msg
+background : List Property -> Component msg
 background = component "background"
 
 
-camera : List Property -> Attribute msg
+camera : List Property -> Component msg
 camera = component "camera"
 
 
-cursor : List Property -> Attribute msg
+cursor : List Property -> Component msg
 cursor = component "cursor"
 
 
-daydreamControls : List Property -> Attribute msg
+daydreamControls : List Property -> Component msg
 daydreamControls = component "daydream-controls"
 
 
-debug : Attribute msg
+debug : Component msg
 debug = component "debug" []
 
 
-deviceOrientationPersmissionUi : List Property -> Attribute msg
+deviceOrientationPersmissionUi : List Property -> Component msg
 deviceOrientationPersmissionUi = component "device-orientation-permission-ui"
 
 
-embedded : Attribute msg
+embedded : Component msg
 embedded = component "embedded" []
 
 
-fog : List Property -> Attribute msg
+fog : List Property -> Component msg
 fog = component "fog"
 
 
-gearVrControls : List Property -> Attribute msg
+gearVrControls : List Property -> Component msg
 gearVrControls = component "gearvr-controls"
 
 
-geometry : List Property -> Attribute msg
+geometry : List Property -> Component msg
 geometry = component "geometry"
 
 
-gltfModel : String -> Attribute msg
+gltfModel : String -> Component msg
 gltfModel = attribute "gltf-model"
 
 
-handControls : List Property -> Attribute msg
+handControls : List Property -> Component msg
 handControls = component "hand-controls"
 
 
-keyboardShortcuts : List Property -> Attribute msg
+keyboardShortcuts : List Property -> Component msg
 keyboardShortcuts = component "keyboard-shortcuts"
 
 
-laserControls : List Property -> Attribute msg
+laserControls : List Property -> Component msg
 laserControls = component "laser-controls"
 
 
-light : List Property -> Attribute msg
+light : List Property -> Component msg
 light = component "light"
 
 
-line : List Property -> Attribute msg
+line : List Property -> Component msg
 line = component "line"
 
 
-line_ : String -> List Property -> Attribute msg
+line_ : String -> List Property -> Component msg
 line_ name = component <| "line__" ++ name
 
 
-link : List Property -> Attribute msg
+link : List Property -> Component msg
 link = component "link"
 
 
-loadingScreen : List Property -> Attribute msg
+loadingScreen : List Property -> Component msg
 loadingScreen = component "loading-screen"
 
 
-lookControls : List Property -> Attribute msg
+lookControls : List Property -> Component msg
 lookControls = component "look-controls"
 
 
-material : List Property -> Attribute msg
+material : List Property -> Component msg
 material = component "material"
 
 
-objModel : List Property -> Attribute msg
+objModel : List Property -> Component msg
 objModel = component "obj-model"
 
 
-oculusGoControls : List Property -> Attribute msg
+oculusGoControls : List Property -> Component msg
 oculusGoControls = component "oculus-go-controls"
 
 
-oculusTouchControls : List Property -> Attribute msg
+oculusTouchControls : List Property -> Component msg
 oculusTouchControls = component "oculus-touch-controls"
 
 
-pool : List Property -> Attribute msg
+pool : List Property -> Component msg
 pool = component "pool"
 
 
-position : Float -> Float -> Float -> Attribute msg
+position : Float -> Float -> Float -> Component msg
 position =
     AF.position
 
 
-raycaster : List Property -> Attribute msg
+raycaster : List Property -> Component msg
 raycaster = component "raycaster"
 
 
-renderer : List Property -> Attribute msg
+renderer : List Property -> Component msg
 renderer = component "renderer"
 
 
-rotation : Float -> Float -> Float -> Attribute msg
+rotation : Float -> Float -> Float -> Component msg
 rotation =
     AF.rotation
 
 
-scale : Float -> Float -> Float -> Attribute msg
+scale : Float -> Float -> Float -> Component msg
 scale =
     AF.scale
 
 
-shadow : List Property -> Attribute msg
+shadow : List Property -> Component msg
 shadow = component "shadow"
 
 
-sound : List Property -> Attribute msg
+sound : List Property -> Component msg
 sound = component "sound"
 
 
-stats : Attribute msg
+stats : Component msg
 stats = component "stats" []
 
 
-text : List Property -> Attribute msg
+text : List Property -> Component msg
 text = component "text"
 
 
-trackedControls : List Property -> Attribute msg
+trackedControls : List Property -> Component msg
 trackedControls = component "tracked-controls"
 
 
-visible : Bool -> Attribute msg
+visible : Bool -> Component msg
 visible =
     attribute "visible" << boolToString
 
 
-viveControls : List Property -> Attribute msg
+viveControls : List Property -> Component msg
 viveControls = component "vive-controls"
 
 
-viveFocusControls : List Property -> Attribute msg
+viveFocusControls : List Property -> Component msg
 viveFocusControls = component "vive-focus-controls"
 
 
-vrModeUi : List Property -> Attribute msg
+vrModeUi : List Property -> Component msg
 vrModeUi = component "vr-mode-ui"
 
 
-wasdControls : List Property -> Attribute msg
+wasdControls : List Property -> Component msg
 wasdControls = component "wasd-controls"
 
 
-windowsMotionControls : List Property -> Attribute msg
+windowsMotionControls : List Property -> Component msg
 windowsMotionControls = component "windows-motion-controls"

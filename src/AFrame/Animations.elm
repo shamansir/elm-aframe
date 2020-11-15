@@ -28,12 +28,12 @@ import Html exposing (node, Html, Attribute)
 import Html.Attributes exposing (attribute)
 
 
-import AFrame.Fill exposing (Fill)
-import AFrame.Fill as Fill exposing (toString)
-import AFrame.Direction exposing (Direction)
-import AFrame.Direction as Dir exposing (toString)
-import AFrame.Easings exposing (Easing)
-import AFrame.Easings as Easing exposing (toString)
+import AFrame.Variants.Fill exposing (Fill)
+import AFrame.Variants.Fill as Fill exposing (toString)
+import AFrame.Variants.Direction exposing (Direction)
+import AFrame.Variants.Direction as Dir exposing (toString)
+import AFrame.Variants.Easing exposing (Easing)
+import AFrame.Variants.Easing as Easing exposing (toString)
 
 
 {-| Animation declaration.
