@@ -364,3 +364,19 @@ materialVideoLoadedData = Event "materialvideoloadeddata"
 materialVideoEnded = Event "materialvideoended"
 
 
+{- raycaster -}
+
+{-| Emitted on the intersected entity. Entity is intersecting with a raycaster. Event detail will contain `el`, the raycasting entity, and `intersection`, and `.getIntersection `(el) function which can be used to obtain current intersection data. -}
+raycasterIntersected = Event "raycaster-intersected"
+
+
+{-| Emitted on the intersected entity. Entity is no longer intersecting with a raycaster. Event detail will contain `el`, the raycasting entity. -}
+raycasterIntersectedCleared = Event "raycaster-intersected-cleared"
+
+
+{-| Emitted on the raycasting entity. Raycaster is intersecting with one or more entities. Event detail will contain `els`, an array with the intersected entities, and `intersections`, and `.getIntersection (el)` function which can be used to obtain current intersection data. -}
+raycasterIntersection = Event "raycaster-intersection"
+
+
+{-| Emitted on the raycasting entity. Raycaster is no longer intersecting with one or more entities. Event detail will contain `clearedEls`, an array with the formerly intersected entities. -}
+raycasterIntersectionCleared = Event "raycaster-intersection-cleared"
