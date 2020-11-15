@@ -1,10 +1,10 @@
-module AFrame.Components.Position exposing (..)
+module AFrame.Components.Rotation exposing (..)
 
 
 import AFrame.Properties exposing (Property, property)
 
 
-{-| Negative X axis extends left. Positive X Axis extends right.
+{-| Pitch, rotation about the X-axis.
 
 Default : `0`
 -}
@@ -12,7 +12,7 @@ x : Float -> Property
 x = property "x" << String.fromFloat
 
 
-{-| Negative Y axis extends down. Positive Y Axis extends up.
+{-| Yaw, rotation about the Y-axis.
 
 Default : `0`
 -}
@@ -20,7 +20,7 @@ y : Float -> Property
 y = property "y" << String.fromFloat
 
 
-{-| Negative Z axis extends in. Positive Z Axis extends out.
+{-| Roll, rotation about the Z-axis.
 
 Default : `0`
 -}
