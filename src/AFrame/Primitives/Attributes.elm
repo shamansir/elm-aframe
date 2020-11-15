@@ -26,6 +26,7 @@ import Html exposing (Attribute)
 import Html.Attributes exposing (attribute)
 import Color exposing (Color)
 import Color.Convert exposing (colorToHex)
+import AFrame.Util exposing (..)
 
 
 -- Mesh attributes
@@ -70,17 +71,14 @@ roughness value =
 {-| -}
 translate : Float -> Float -> Float -> Attribute msg
 translate x y z =
-    [ x, y, z ]
-        |> List.map String.fromFloat
-        |> List.intersperse " "
-        |> String.concat
+    vec3ToString x y z
         |> attribute "translate"
 
 
 {-| -}
 transparent : Bool -> Attribute msg
-transparent value =
-    attribute "transparent" (toLower <| if value then "true" else "false")
+transparent =
+    attribute "transparent" << boolToString
 
 
 
@@ -108,30 +106,21 @@ radiusBottom value =
 {-| -}
 position : Float -> Float -> Float -> Attribute msg
 position x y z =
-    [ x, y, z ]
-        |> List.map String.fromFloat
-        |> List.intersperse " "
-        |> String.concat
+    vec3ToString x y z
         |> attribute "position"
 
 
 {-| -}
 scale : Float -> Float -> Float -> Attribute msg
 scale x y z =
-    [ x, y, z ]
-        |> List.map String.fromFloat
-        |> List.intersperse " "
-        |> String.concat
+    vec3ToString x y z
         |> attribute "scale"
 
 
 {-| -}
 rotation : Float -> Float -> Float -> Attribute msg
 rotation x y z =
-    [ x, y, z ]
-        |> List.map String.fromFloat
-        |> List.intersperse " "
-        |> String.concat
+    vec3ToString x y z
         |> attribute "rotation"
 
 

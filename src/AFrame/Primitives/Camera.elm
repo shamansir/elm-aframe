@@ -18,6 +18,8 @@ import String exposing (toLower)
 import Html exposing (node, Html, Attribute)
 import Html.Attributes exposing (attribute)
 
+import AFrame.Util exposing (..)
+
 
 {-| The camera primitive places the user somewhere within the scene.
 
@@ -47,8 +49,8 @@ fov value =
     camera [ lookControlsEnabled False ] []
 -}
 lookControlsEnabled : Bool -> Attribute msg
-lookControlsEnabled value =
-    attribute "look-controls-enabled" (toLower <| if value then "true" else "false")
+lookControlsEnabled =
+    attribute "look-controls-enabled" << boolToString
 
 
 {-| Camera frustum near clipping plane.
@@ -63,5 +65,5 @@ near value =
     camera [ wasdControlsEnabled False ] []
 -}
 wasdControlsEnabled : Bool -> Attribute msg
-wasdControlsEnabled value =
-    attribute "wasd-controls-enabled" (toLower <| if value then "true" else "false")
+wasdControlsEnabled =
+    attribute "wasd-controls-enabled" << boolToString

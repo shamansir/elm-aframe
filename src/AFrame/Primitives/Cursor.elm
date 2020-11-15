@@ -18,6 +18,8 @@ import String exposing (toLower)
 import Html exposing (node, Html, Attribute)
 import Html.Attributes exposing (attribute)
 
+import AFrame.Util exposing (boolToString)
+
 
 {-| The cursor primitive places a reticle or crosshair to add clicking
     and interactivity with the scene.
@@ -30,8 +32,8 @@ cursor =
 {-| Whether cursor should also be fuse-based.
 -}
 fuse : Bool -> Attribute msg
-fuse value =
-    attribute "fuse" (toLower <| if value then "true" else "false")
+fuse =
+    attribute "fuse" << boolToString
 
 
 {-| Maximum distance to check for intersections on entities for clicks.
@@ -51,5 +53,5 @@ timeout value =
 {-| Customize the raycasting pieces of the cursor.
 -}
 raycaster : String -> Attribute msg
-raycaster value =
-    attribute "raycaster" value
+raycaster =
+    attribute "raycaster"

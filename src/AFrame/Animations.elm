@@ -28,8 +28,12 @@ import Html exposing (node, Html, Attribute)
 import Html.Attributes exposing (attribute)
 
 
-import AFrame.Fills exposing (Fill)
-import AFrame.Fills as Fill exposing (toString)
+import AFrame.Fill exposing (Fill)
+import AFrame.Fill as Fill exposing (toString)
+import AFrame.Direction exposing (Direction)
+import AFrame.Direction as Dir exposing (toString)
+import AFrame.Easings exposing (Easing)
+import AFrame.Easings as Easing exposing (toString)
 
 
 {-| Animation declaration.
@@ -74,9 +78,9 @@ begin value =
 
     animation [ direction "reverse" ] []
 -}
-direction : String -> Attribute msg
-direction value =
-    attribute "direction" value
+direction : Direction -> Attribute msg
+direction =
+    attribute "direction" << Dir.toString
 
 
 {-| Duration in (milliseconds) of the animation.
@@ -92,9 +96,9 @@ dur value =
 
     animation [ easing "rotation" ] []
 -}
-easing : String -> Attribute msg
-easing value =
-    attribute "easing" value
+easing : Easing -> Attribute msg
+easing =
+    attribute "easing" << Easing.toString
 
 
 {-| Determines effect of animation when not actively in play.
@@ -112,8 +116,8 @@ fill =
     animation [ from "0 120 0" ] []
 -}
 from : String -> Attribute msg
-from value =
-    attribute "from" value
+from =
+    attribute "from"
 
 
 {-| Repeat count.
