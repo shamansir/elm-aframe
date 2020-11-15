@@ -1,7 +1,7 @@
 module AFrame.Components.Geometry.TorusKnot exposing (..)
 
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 
 
 {-| Radius of the outer edge of the torus.

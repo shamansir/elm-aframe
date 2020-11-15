@@ -1,7 +1,7 @@
 module AFrame.Components.Geometry.Box exposing (..)
 
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 
 
 {-| Width (in meters) of the sides on the X axis.

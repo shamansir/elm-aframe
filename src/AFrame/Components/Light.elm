@@ -3,10 +3,10 @@ module AFrame.Components.Light exposing (..)
 
 import Color exposing (Color)
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 import AFrame.Util exposing (..)
-import AFrame.Light exposing (Light)
-import AFrame.Light as Light exposing (toString)
+import AFrame.Variants.Light exposing (Light)
+import AFrame.Variants.Light as Light exposing (toString)
 
 
 

@@ -4,6 +4,14 @@ module AFrame.Events exposing (..)
 type Event = Event String
 
 
+toString : Event -> String
+toString (Event name) = name
+
+
+stringify : List Event -> String
+stringify = List.map toString >> String.join ","
+
+
 {- animation -}
 
 
@@ -127,25 +135,44 @@ pistolStart = Event "pistolstart"
 pistolEnd = Event "pistolend"
 
 
+{- device-orientation-ui -}
+
+
+{-| User has granted access to DeviceOrientation events -}
 deviceOrientationPermissionGranted = Event "deviceorientationpermissiongranted"
 
 
-deviceOrientationPermissionRejected = Event "eviceorientationpermissionrejected"
+{-| User or browser has denied access to DeviceOrientation events -}
+deviceOrientationPermissionRejected = Event "deviceorientationpermissionrejected"
 
 
+{-| Application has requested permission to access DeviceOrientation events -}
 deviceOrientationPermissionRequested = Event "deviceorientationpermissionrequested"
 
 
+{- gltf-model -}
 
+
+{-| glTF model has been loaded into the scene. -}
 modelLoaded = Event "model-loaded"
 
 
+{-| glTF model could not be loaded. -}
 modelError = Event "model-error"
 
 
-toString : Event -> String
-toString (Event name) = name
+{- material -}
 
 
-stringify : List Event -> String
-stringify = List.map toString >> String.join ","
+{-| Texture loaded onto material. -}
+materialTextureLoaded = Event "materialtextureloaded"
+
+
+{-| Video data loaded and is going to play. -}
+materialVideoLoadedData = Event "materialvideoloadeddata"
+
+
+{-| For video textures, emitted when the video has reached its end (may not work with loop). -}
+materialVideoEnded = Event "materialvideoended"
+
+

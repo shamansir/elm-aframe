@@ -15,3 +15,10 @@ vec3ToString x y z =
         |> String.join " "
 
 
+vec2ToString : Float -> Float -> String
+vec2ToString x y =
+    [ x, y ]
+        |> List.map String.fromFloat
+        |> String.join " "
+
+

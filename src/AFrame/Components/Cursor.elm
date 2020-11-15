@@ -1,7 +1,7 @@
 module AFrame.Components.Cursor exposing (..)
 
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 import AFrame.Events exposing (Event)
 import AFrame.Events as Events exposing (stringify)
 import AFrame.Util exposing (..)

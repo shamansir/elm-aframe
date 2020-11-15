@@ -1,4 +1,4 @@
-module AFrame.Hand exposing (..)
+module AFrame.Variants.Hand exposing (..)
 
 
 type Hand

@@ -1,4 +1,4 @@
-module AFrame.HandStyle exposing (..)
+module AFrame.Variants.HandStyle exposing (..)
 
 
 type HandStyle

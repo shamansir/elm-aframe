@@ -2,9 +2,9 @@ module AFrame.Components.Fog exposing (..)
 
 import Color exposing (Color)
 
-import AFrame.Components.Properties exposing (Property, property)
-import AFrame.Fog exposing (Fog)
-import AFrame.Fog as Fog exposing (toString)
+import AFrame.Properties exposing (Property, property)
+import AFrame.Variants.Fog exposing (Fog)
+import AFrame.Variants.Fog as Fog exposing (toString)
 import AFrame.Util exposing (..)
 
 

@@ -1,4 +1,4 @@
-module AFrame.Easings exposing (..)
+module AFrame.Variants.Easing exposing (..)
 
 
 type Type

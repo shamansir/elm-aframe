@@ -1,4 +1,4 @@
-module AFrame.Shadow exposing (..)
+module AFrame.Variants.Shadow exposing (..)
 
 
 {-| Different kinds of shadows

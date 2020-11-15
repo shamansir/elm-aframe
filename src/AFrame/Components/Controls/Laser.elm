@@ -3,10 +3,10 @@ module AFrame.Components.Controls.Laser exposing (..)
 
 import Color exposing (Color)
 
-import AFrame.Hand exposing (Hand)
-import AFrame.Hand as Hand exposing (toString)
+import AFrame.Variants.Hand exposing (Hand)
+import AFrame.Variants.Hand as Hand exposing (toString)
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 import AFrame.Util exposing (..)
 
 

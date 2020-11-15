@@ -1,15 +1,15 @@
 module AFrame.Components.Animations exposing (..)
 
 
-import AFrame.Components.Properties as P exposing (Property, property)
+import AFrame.Properties as P exposing (Property, property)
 
 import Color exposing (Color)
 
-import AFrame.Fill exposing (Fill)
-import AFrame.Fill as Fill exposing (toString)
-import AFrame.Direction as Dir exposing (Direction, toString)
-import AFrame.Easings exposing (Easing)
-import AFrame.Easings as Easing exposing (toString)
+import AFrame.Variants.Fill exposing (Fill)
+import AFrame.Variants.Fill as Fill exposing (toString)
+import AFrame.Variants.Direction as Dir exposing (Direction, toString)
+import AFrame.Variants.Easing exposing (Easing)
+import AFrame.Variants.Easing as Easing exposing (toString)
 import AFrame.Events exposing (Event)
 import AFrame.Events as Events exposing (stringify)
 import AFrame.Util exposing (..)

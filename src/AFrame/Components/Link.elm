@@ -3,7 +3,7 @@ module AFrame.Components.Link exposing (..)
 
 import Color exposing (Color)
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 import AFrame.Util exposing (..)
 import AFrame.Events exposing (Event)
 import AFrame.Events as Event exposing (toString)

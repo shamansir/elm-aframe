@@ -1,7 +1,7 @@
 module AFrame.Components.Geometry exposing (..)
 
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 import AFrame.Components.Primitives exposing (Primitive)
 import AFrame.Components.Primitives as Primitive exposing (toString)
 import AFrame.Util exposing (..)

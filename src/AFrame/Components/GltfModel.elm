@@ -1,7 +1,7 @@
 module AFrame.Components.GltfModel exposing (..)
 
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 
 {-|
 Path to the Draco decoder libraries.

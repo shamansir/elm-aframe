@@ -1,7 +1,7 @@
 module AFrame.Components.Controls.Look exposing (..)
 
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 import AFrame.Util exposing (..)
 
 

@@ -5,8 +5,8 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 
 
-import AFrame.Components.Properties exposing (Property, toString)
-import AFrame.Components.Properties as Properties exposing (toString)
+import AFrame.Properties exposing (Property, toString)
+import AFrame.Properties as Properties exposing (toString)
 import AFrame.Primitives.Attributes as AF exposing (position)
 import AFrame.Util exposing (boolToString)
 

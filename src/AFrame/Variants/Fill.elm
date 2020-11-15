@@ -1,4 +1,4 @@
-module AFrame.Fill exposing (..)
+module AFrame.Variants.Fill exposing (..)
 
 
 type Fill

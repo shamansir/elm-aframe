@@ -1,7 +1,7 @@
 module AFrame.Components.Geometry.Ring exposing (..)
 
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 
 
 {-| Radius of the inner hole of the ring.

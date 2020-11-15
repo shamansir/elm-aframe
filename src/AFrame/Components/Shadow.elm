@@ -1,11 +1,11 @@
 module AFrame.Components.Shadow exposing (..)
 
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 
 import AFrame.Util exposing (..)
-import AFrame.Shadow exposing (Shadow)
-import AFrame.Shadow as Shadow exposing (toString)
+import AFrame.Variants.Shadow exposing (Shadow)
+import AFrame.Variants.Shadow as Shadow exposing (toString)
 
 
 {-| Defines shadow map type (`basic`, `pcf`, `pcfsoft`) with varying appearance and performance characteristics.

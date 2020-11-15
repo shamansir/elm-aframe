@@ -1,6 +1,6 @@
 module AFrame.Components.Geometry.Plane exposing (..)
 
-import AFrame.Components.Properties exposing (Property, property)
+import AFrame.Properties exposing (Property, property)
 
 
 {-| Width along the X axis.

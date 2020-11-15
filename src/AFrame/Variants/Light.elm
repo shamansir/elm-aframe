@@ -1,4 +1,4 @@
-module AFrame.Light exposing (..)
+module AFrame.Variants.Light exposing (..)
 
 
 {-| Different kinds of lights

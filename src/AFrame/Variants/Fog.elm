@@ -1,4 +1,4 @@
-module AFrame.Fog exposing (..)
+module AFrame.Variants.Fog exposing (..)
 
 
 type Fog
