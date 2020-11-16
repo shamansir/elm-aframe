@@ -1,4 +1,25 @@
-module AFrame.Components.Material exposing (..)
+module AFrame.Components.Material exposing
+
+    ( shader
+    , alphaTest, depthTest
+    , blending, dithering, flatShading
+    , offset, opacity, repeat, side, transparent, npot
+    , vertexColors, visible
+    )
+
+
+{-| # Material
+
+@docs shader
+
+@docs alphaTest, depthTest
+
+@docs blending, dithering, flatShading
+
+@docs offset, opacity, repeat, side, transparent, npot
+
+@docs vertexColors, visible
+-}
 
 
 import AFrame.Properties exposing (Property, property)

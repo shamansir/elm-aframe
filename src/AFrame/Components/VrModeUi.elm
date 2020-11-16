@@ -1,4 +1,11 @@
-module AFrame.Components.VrModeUi exposing (..)
+module AFrame.Components.VrModeUi exposing
+
+    ( enabled, enterVRButton, enterARButton )
+
+{-| # VR-Mode UI
+
+@docs enterVRButton, enterARButton, enabled
+-}
 
 
 import AFrame.Properties exposing (Property, property)

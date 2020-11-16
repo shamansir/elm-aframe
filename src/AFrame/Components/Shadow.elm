@@ -1,4 +1,39 @@
-module AFrame.Components.Shadow exposing (..)
+module AFrame.Components.Shadow exposing
+
+    ( type_
+    , cast, receive
+    , shadowBias
+    , shadowMapWidth, shadowMapHeight
+    , shadowCameraLeft, shadowCameraTop, shadowCameraBottom, shadowCameraRight, shadowCameraNear, shadowCameraFar, shadowCameraFov, shadowCameraVisible
+    , autoUpdate, enabled
+    )
+
+{-| # Shadow
+
+See `AFrame.Components.Light` for corresponding light component.
+
+@docs type_
+
+# Cast / Receive
+
+@docs cast, receive
+
+# Shadow Map
+
+@docs shadowMapWidth, shadowMapHeight
+
+# Shadow Camera Cube
+
+@docs shadowCameraLeft, shadowCameraTop, shadowCameraRight, shadowCameraBottom, shadowCameraNear, shadowCameraFar
+
+# Shadow Camera Options
+
+@docs shadowCameraFov, shadowCameraVisible
+
+# Configuration
+
+@docs autoUpdate, enabled
+-}
 
 
 import AFrame.Properties exposing (Property, property)

@@ -1,4 +1,44 @@
-module AFrame.Components.Text exposing (..)
+module AFrame.Components.Text exposing
+
+    ( value, font, fontImage, color, npot, opacity, transparent
+    , shader, side
+    , width, height, lineHeight
+    , align, anchor, baseline, whiteSpace, wrapCount, wrapPixels
+    , letterSpacing, tabSize
+    , offset, xOffset, zOffset, repeat
+    , alphaTest, depthTest
+    , dithering, flatShading
+    , visible
+    )
+
+{-| # Text
+
+@docs value, font, fontImage, color, opacity, transparent
+
+# Material
+
+@docs shader, npot, side, dithering, flatShading
+
+# Bounds
+
+@docs width, height
+
+# Typography
+
+@docs align, anchor, baseline, lineHeight, whiteSpace, wrapCount, wrapPixels, letterSpacing, tabSize
+
+# Offset & Repeat
+
+@docs offset, xOffset, zOffset, repeat
+
+# Alpha & Depth
+
+@docs alphaTest, depthTest
+
+# Visible
+
+@docs visible
+-}
 
 import Color exposing (Color)
 
@@ -16,6 +56,7 @@ import AFrame.Variants.Text.Font exposing (Font)
 import AFrame.Variants.Text.Font as Font exposing (toString)
 import AFrame.Variants.Text.WhiteSpace exposing (WhiteSpace)
 import AFrame.Variants.Text.WhiteSpace as WhiteSpace exposing (toString)
+import Html.Attributes exposing (wrap)
 
 
 

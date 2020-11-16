@@ -1,4 +1,21 @@
-module AFrame.Components.Renderer exposing (..)
+module AFrame.Components.Renderer exposing
+
+    ( maxCanvasWidth, maxCanvasHeight
+    , alpha, antialias, antialiasAuto, colorManagement
+    , foveationLevel, highRefreshRate, logarithmicDepthBuffer, logarithmicDepthBufferAuto
+    , physicallyCorrectLights, precision, sortObjects
+    )
+
+{-| # Renderer
+
+# Canvas
+
+@docs maxCanvasWidth, maxCanvasHeight
+
+# Configuration
+
+@docs alpha, antialias, antialiasAuto, colorManagement, foveationLevel, highRefreshRate, logarithmicDepthBuffer, logarithmicDepthBufferAuto, physicallyCorrectLights, precision, sortObjects
+-}
 
 
 import AFrame.Properties exposing (Property, property)

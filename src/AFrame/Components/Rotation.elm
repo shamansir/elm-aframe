@@ -1,4 +1,12 @@
-module AFrame.Components.Rotation exposing (..)
+module AFrame.Components.Rotation exposing
+
+    ( x, y, z
+    )
+
+{-| # Rotation
+
+@docs x, y, z
+-}
 
 
 import AFrame.Properties exposing (Property, property)

@@ -1,4 +1,12 @@
-module AFrame.Components.Position exposing (..)
+module AFrame.Components.Position exposing
+
+    ( x, y, z
+    )
+
+{-| # Position
+
+@docs x, y, z
+-}
 
 
 import AFrame.Properties exposing (Property, property)

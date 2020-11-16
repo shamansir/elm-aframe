@@ -1,4 +1,12 @@
-module AFrame.Components.Scale exposing (..)
+module AFrame.Components.Scale exposing
+
+    ( x, y, z
+    )
+
+{-| # Scale
+
+@docs x, y, z
+-}
 
 
 import AFrame.Properties exposing (Property, property)

@@ -1,4 +1,13 @@
-module AFrame.Components.Pool exposing (..)
+module AFrame.Components.Pool exposing
+
+    ( container, size, dynamic, mixin
+    )
+
+
+{-| # Pool
+
+@docs container, size, dynamic, mixin
+-}
 
 
 import AFrame.Properties exposing (Property, property)

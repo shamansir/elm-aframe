@@ -1,4 +1,12 @@
-module AFrame.Components.Screenshot exposing (..)
+module AFrame.Components.Screenshot exposing
+
+    ( width, height
+    )
+
+{-| # Screenshot
+
+@docs width, height
+-}
 
 
 import AFrame.Properties exposing (Property, property)

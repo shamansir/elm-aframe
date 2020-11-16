@@ -3,15 +3,15 @@ module AFrame.Components.Animations exposing
     ( enabled, type_, property, isRawProperty
     , from, fromBool, fromColor, fromVec3
     , to, toBool, toColor, toVec3
-    , delay, dir, dur, fill
-    , easing, elasticity
+    , delay, dir, dur, fill, round
+    , easing, elasticity, round
     , autoplay, loop, loopForever, repeat, repeatForever
     , startEvents, pauseEvents, resumeEvents
     )
 
 {-| # Core
 
-@docs enabled, type_, property, isRawProperty
+@docs type_, property, isRawProperty
 
 # Tween
 
@@ -19,7 +19,7 @@ module AFrame.Components.Animations exposing
 
 # Easing
 
-@docs easing, elasticity
+@docs easing, elasticity, round
 
 # Timing
 
@@ -32,6 +32,10 @@ module AFrame.Components.Animations exposing
 # Events
 
 @docs autoplay, startEvents, pauseEvents, resumeEvents
+
+# Turning off
+
+@docs enabled
 -}
 
 

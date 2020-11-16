@@ -1,4 +1,25 @@
-module AFrame.Components.Raycaster exposing (..)
+module AFrame.Components.Raycaster exposing
+
+    ( origin, direction, objects
+    , near, far, inifitelyFar
+    , autoRefresh, interval
+    , showLine, useWorldCoordinates, enabled
+    )
+
+{-| # Raycaster
+
+# Setup
+
+@docs origin, direction, objects, interval
+
+# Continuation
+
+@docs near, far, inifitelyFar
+
+# Other
+
+@docs showLine, autoRefresh, enabled
+-}
 
 
 import AFrame.Properties exposing (Property, property)

@@ -1,4 +1,32 @@
-module AFrame.Components.Sound exposing (..)
+module AFrame.Components.Sound exposing
+
+    ( src
+    , volume, autoplay, loop
+    , positional, distanceModel, refDistance, maxDistance, rolloffFactor
+    , poolSize
+    , on
+    )
+
+{-| # Sound
+
+@docs src
+
+# Configuration
+
+@docs volume, autoplay, loop
+
+# Distance & Distribution
+
+@docs positional, distanceModel, refDistance, maxDistance, rolloffFactor
+
+# Pool
+
+@docs poolSize
+
+# Events
+
+@docs on
+-}
 
 
 import AFrame.Properties exposing (Property, property)
