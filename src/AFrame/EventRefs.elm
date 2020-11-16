@@ -12,6 +12,10 @@ stringify : List EventRef -> String
 stringify = List.map toString >> String.join ","
 
 
+{-| Constructor for custom events. -}
+ref : String -> EventRef
+ref = EventRef
+
 
 {- animation -}
 
@@ -390,3 +394,9 @@ soundLoaded = EventRef "sound-loaded"
 
 {-| Triggered when sound finishes playing. Event detail will contain the sound’s `name` and `id`. -}
 soundEnded = EventRef "sound-ended"
+
+
+{- text -}
+
+{-| Emitted when the font source has been loaded. -}
+textFontSet = EventRef "textfontset"
