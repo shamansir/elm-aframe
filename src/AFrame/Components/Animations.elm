@@ -10,8 +10,8 @@ import AFrame.Variants.Fill as Fill exposing (toString)
 import AFrame.Variants.Direction as Dir exposing (Direction, toString)
 import AFrame.Variants.Easing exposing (Easing)
 import AFrame.Variants.Easing as Easing exposing (toString)
-import AFrame.Events exposing (Event)
-import AFrame.Events as Events exposing (stringify)
+import AFrame.EventRefs exposing (EventRef)
+import AFrame.EventRefs as EventRefs exposing (stringify)
 import AFrame.Util exposing (..)
 
 
@@ -164,20 +164,20 @@ round = P.property "round" << boolToString
 
 
 {-| Comma-separated list of events to listen to trigger a restart and play. Animation will not autoplay if specified. `startEvents` will *restart* the animation, use `pauseEvents` to resume it. If there are other animation components on the entity animating the same property, those animations will be automatically paused to not conflict. -}
-startEvents : List Event -> Property
-startEvents = P.property "startEvents" << Events.stringify
+startEvents : List EventRef -> Property
+startEvents = P.property "startEvents" << EventRefs.stringify
 
 
 {-| Comma-separated list of events to listen to trigger pause. Can be resumed with resumeEvents.
 -}
-pauseEvents : List Event -> Property
-pauseEvents = P.property "pauseEvents" << Events.stringify
+pauseEvents : List EventRef -> Property
+pauseEvents = P.property "pauseEvents" << EventRefs.stringify
 
 
 {-| Comma-separated list of events to listen to trigger resume after pausing.
 -}
-resumeEvents : List Event -> Property
-resumeEvents = P.property "resumeEvents" << Events.stringify
+resumeEvents : List EventRef -> Property
+resumeEvents = P.property "resumeEvents" << EventRefs.stringify
 
 
 {-| Whether or not the animation should autoplay. Should be specified if the animation is defined for the [animation-timeline](https://www.npmjs.com/package/aframe-animation-timeline-component) component.

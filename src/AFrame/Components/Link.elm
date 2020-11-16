@@ -5,8 +5,8 @@ import Color exposing (Color)
 
 import AFrame.Properties exposing (Property, property)
 import AFrame.Util exposing (..)
-import AFrame.Events exposing (Event)
-import AFrame.Events as Event exposing (toString)
+import AFrame.EventRefs exposing (EventRef)
+import AFrame.EventRefs as EventRef exposing (toString)
 
 
 {-| Inner (background) color of the portal.
@@ -61,8 +61,8 @@ image = property "image"
 
 Default : `click`
 -}
-on : Event -> Property
-on = property "on" << Event.toString
+on : EventRef -> Property
+on = property "on" << EventRef.toString
 
 
 {-| Whether the 360° image is fully expanded for preview.

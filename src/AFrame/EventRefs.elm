@@ -1,14 +1,14 @@
-module AFrame.Events exposing (..)
+module AFrame.EventRefs exposing (..)
 
 
-type Event = Event String
+type EventRef = EventRef String
 
 
-toString : Event -> String
-toString (Event name) = name
+toString : EventRef -> String
+toString (EventRef name) = name
 
 
-stringify : List Event -> String
+stringify : List EventRef -> String
 stringify = List.map toString >> String.join ","
 
 
@@ -17,42 +17,42 @@ stringify = List.map toString >> String.join ","
 
 
 {-| Animation began. Event detail contains `name` of animation. -}
-animationBegin = Event "animationbegin"
+animationBegin = EventRef "animationbegin"
 
 
 {-| Animation completed. Event detail contains `name` of animation. -}
-animationComplete = Event "animationcomplete"
+animationComplete = EventRef "animationcomplete"
 
 
 {-| Animation completed if animation has an ID (e.g., `animation_ "click"`). -}
-animationCompleteWithId = Event "animationcomplete__"
+animationCompleteWithId = EventRef "animationcomplete__"
 
 
 {- cursor -}
 
 
 {-| Emitted on both cursor and intersected entity if a currently intersected entity is clicked (whether by mouse or by fuse). -}
-click = Event "click"
+click = EventRef "click"
 
 
 {-| Emitted on both cursor and intersected entity when fuse-based cursor starts counting down. -}
-fusing = Event "fusing"
+fusing = EventRef "fusing"
 
 
 {-| Emitted on both cursor and intersected entity (if any) on `mousedown` on the canvas element. -}
-mouseDown = Event "mousedown"
+mouseDown = EventRef "mousedown"
 
 
 {-| Emitted on both cursor and intersected entity (if any) when cursor intersects with an entity. -}
-mouseEnter = Event "mouseenter"
+mouseEnter = EventRef "mouseenter"
 
 
 {-| Emitted on both cursor and intersected entity (if any) when cursor no longer intersects with previously intersected entity. -}
-mouseLeave = Event "mouseleave"
+mouseLeave = EventRef "mouseleave"
 
 
 {-| Emitted on both cursor and intersected entity (if any) on mouseup on the canvas element. -}
-mouseUp = Event "mouseup"
+mouseUp = EventRef "mouseup"
 
 
 type ControlSubject
@@ -78,9 +78,9 @@ type ControlAction
 
 
 
-control : ControlSubject -> ControlAction -> Event
+control : ControlSubject -> ControlAction -> EventRef
 control subj action =
-    Event
+    EventRef
     <| (case subj of
         Trackpad -> "trackpad"
         Trigger -> "trigger"
@@ -292,91 +292,101 @@ gripChanged = control Grip Changed
 
 
 {-| The hand is touching or pressing the trigger only. -}
-pointUp = Event "pointup"
+pointUp = EventRef "pointup"
 
 
 {-| The hand is no longer touching or pressing the trigger only. -}
-pointDown = Event "pointdown"
+pointDown = EventRef "pointdown"
 
 
 {-| The hand is closed into a fist with thumb raised. -}
-thumbUp = Event "thumbup"
+thumbUp = EventRef "thumbup"
 
 
 {-| The hand is no longer closed into a fist with thumb raised. -}
-thumbDown = Event "thumbdown"
+thumbDown = EventRef "thumbdown"
 
 
 {-| The hand is pointing with index finger without thumb raised. -}
-pointingStart = Event "pointingstart"
+pointingStart = EventRef "pointingstart"
 
 
 {-| The hand is no longer pointing without thumb raised. -}
-pointingEnd = Event "pointingend"
+pointingEnd = EventRef "pointingend"
 
 
 {-| The hand is pointing with index finger and thumb raised. -}
-pistolStart = Event "pistolstart"
+pistolStart = EventRef "pistolstart"
 
 
 {-| The hand is no longer pointing with thumb raised. -}
-pistolEnd = Event "pistolend"
+pistolEnd = EventRef "pistolend"
 
 
 {- device-orientation-ui -}
 
 
 {-| User has granted access to DeviceOrientation events -}
-deviceOrientationPermissionGranted = Event "deviceorientationpermissiongranted"
+deviceOrientationPermissionGranted = EventRef "deviceorientationpermissiongranted"
 
 
 {-| User or browser has denied access to DeviceOrientation events -}
-deviceOrientationPermissionRejected = Event "deviceorientationpermissionrejected"
+deviceOrientationPermissionRejected = EventRef "deviceorientationpermissionrejected"
 
 
 {-| Application has requested permission to access DeviceOrientation events -}
-deviceOrientationPermissionRequested = Event "deviceorientationpermissionrequested"
+deviceOrientationPermissionRequested = EventRef "deviceorientationpermissionrequested"
 
 
 {- gltf-model, obj-model -}
 
 
 {-| glTF model has been loaded into the scene. -}
-modelLoaded = Event "model-loaded"
+modelLoaded = EventRef "model-loaded"
 
 
 {-| glTF model could not be loaded. -}
-modelError = Event "model-error"
+modelError = EventRef "model-error"
 
 
 {- material -}
 
 
 {-| Texture loaded onto material. -}
-materialTextureLoaded = Event "materialtextureloaded"
+materialTextureLoaded = EventRef "materialtextureloaded"
 
 
 {-| Video data loaded and is going to play. -}
-materialVideoLoadedData = Event "materialvideoloadeddata"
+materialVideoLoadedData = EventRef "materialvideoloadeddata"
 
 
 {-| For video textures, emitted when the video has reached its end (may not work with loop). -}
-materialVideoEnded = Event "materialvideoended"
+materialVideoEnded = EventRef "materialvideoended"
 
 
 {- raycaster -}
 
 {-| Emitted on the intersected entity. Entity is intersecting with a raycaster. Event detail will contain `el`, the raycasting entity, and `intersection`, and `.getIntersection `(el) function which can be used to obtain current intersection data. -}
-raycasterIntersected = Event "raycaster-intersected"
+raycasterIntersected = EventRef "raycaster-intersected"
 
 
 {-| Emitted on the intersected entity. Entity is no longer intersecting with a raycaster. Event detail will contain `el`, the raycasting entity. -}
-raycasterIntersectedCleared = Event "raycaster-intersected-cleared"
+raycasterIntersectedCleared = EventRef "raycaster-intersected-cleared"
 
 
 {-| Emitted on the raycasting entity. Raycaster is intersecting with one or more entities. Event detail will contain `els`, an array with the intersected entities, and `intersections`, and `.getIntersection (el)` function which can be used to obtain current intersection data. -}
-raycasterIntersection = Event "raycaster-intersection"
+raycasterIntersection = EventRef "raycaster-intersection"
 
 
 {-| Emitted on the raycasting entity. Raycaster is no longer intersecting with one or more entities. Event detail will contain `clearedEls`, an array with the formerly intersected entities. -}
-raycasterIntersectionCleared = Event "raycaster-intersection-cleared"
+raycasterIntersectionCleared = EventRef "raycaster-intersection-cleared"
+
+
+{- sound -}
+
+{-| Triggered when sound file is loaded. Event detail will contain the sound’s `name` and `id`. -}
+soundLoaded = EventRef "sound-loaded"
+
+
+{-| Triggered when sound finishes playing. Event detail will contain the sound’s `name` and `id`. -}
+soundEnded = EventRef "sound-ended"

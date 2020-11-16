@@ -2,8 +2,8 @@ module AFrame.Components.Cursor exposing (..)
 
 
 import AFrame.Properties exposing (Property, property)
-import AFrame.Events exposing (Event)
-import AFrame.Events as Events exposing (stringify)
+import AFrame.EventRefs exposing (EventRef)
+import AFrame.EventRefs as EventRefs exposing (stringify)
 import AFrame.Util exposing (..)
 
 
@@ -11,8 +11,8 @@ import AFrame.Util exposing (..)
 
 Default : `[]`
 -}
-downEvents : List Event -> Property
-downEvents = property "downEvents" << Events.stringify
+downEvents : List EventRef -> Property
+downEvents = property "downEvents" << EventRefs.stringify
 
 
 {-| Whether cursor is fuse-based.
@@ -49,6 +49,6 @@ rayOrigin = property "rayOrigin"
 
 Default : `[]`
 -}
-upEvents : List Event -> Property
-upEvents = property "upEvents" << Events.stringify
+upEvents : List EventRef -> Property
+upEvents = property "upEvents" << EventRefs.stringify
 
