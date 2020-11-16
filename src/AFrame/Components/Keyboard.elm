@@ -1,4 +1,12 @@
-module AFrame.Components.Keyboard exposing (..)
+module AFrame.Components.Keyboard exposing
+
+    ( enterVr
+    )
+
+{-| # Keyboard
+
+@docs enterVr
+-}
 
 
 import AFrame.Properties exposing (Property, property)

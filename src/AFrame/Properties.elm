@@ -9,8 +9,6 @@ module AFrame.Properties exposing
 
 Property of a component
 
-# Construcion
-
 @docs Property, property
 
 # Conversion

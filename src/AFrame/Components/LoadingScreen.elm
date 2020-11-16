@@ -1,4 +1,13 @@
-module AFrame.Components.LoadingScreen exposing (..)
+module AFrame.Components.LoadingScreen exposing
+
+    ( backgroundColor, dotsColor, enabled
+    )
+
+
+{-| # LoadingScreen
+
+@docs dotsColor, backgroundColor, enabled
+-}
 
 
 import Color exposing (Color)
@@ -7,7 +16,7 @@ import AFrame.Properties exposing (Property, property)
 import AFrame.Util exposing (..)
 
 
-{-| 	Loader dots color.
+{-| Loader dots color.
 
 Default : `white`
 -}

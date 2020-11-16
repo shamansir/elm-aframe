@@ -1,5 +1,12 @@
-module AFrame.Components.Background exposing (..)
+module AFrame.Components.Background exposing
 
+    ( background, transparent )
+
+
+{-| # Background
+
+@docs background, transparent
+-}
 
 import Color exposing (Color)
 

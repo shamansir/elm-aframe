@@ -42,8 +42,6 @@ module AFrame.Components exposing
         ]
         []
 
-# Construction
-
 @docs Component, component, node, node_
 
 # General

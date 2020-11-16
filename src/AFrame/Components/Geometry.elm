@@ -1,9 +1,65 @@
-module AFrame.Components.Geometry exposing (..)
+module AFrame.Components.Geometry exposing
+
+    ( primitive
+    , buffer, skipCache
+    , width, height, depth
+    , radius, radiusInner, radiusOuter, radiusTubular
+    , segments, segmentsWidth, segmentsHeight, segmentsDepth
+    , segmentsRadial, segmentsTubular, segmentsTheta, segmentsPhi
+    , phiStart, phiLength
+    , thetaStart, thetaLength
+    , vertexA, vertexB, vertexC
+    , arc, p, q
+    , openEnded
+    )
+
+{-| # Geometry
+
+@docs primitive
+
+# Config
+
+@docs buffer, skipCache
+
+*NB:* The functions below are just the references to all the possible properties of primitives in `AFrame.Components.Geometry`, not to make you import every module separately when in urgen need. Still we recommend to prefer using those for particular primitives instead.
+
+# Dimensions
+
+@docs width, height, depth
+
+# Radial dimensions
+
+@docs radius, radiusInner, radiusOuter, radiusTubular
+
+# Mesh structure
+
+@docs segments, segmentsWidth, segmentsHeight, segmentsDepth
+
+# Radial mesh structure
+
+@docs segmentsRadial, segmentsTubular, segmentsTheta, segmentsPhi
+
+# Phi & Theta for partial primitives
+
+@docs phiStart, phiLength, thetaStart, thetaLength
+
+# Partial primitives
+
+@docs arc, p, q
+
+# Vertices
+
+@docs vertexA, vertexB, vertexC
+
+# Cone open end
+
+@docs openEnded
+-}
 
 
 import AFrame.Properties exposing (Property, property)
-import AFrame.Components.Primitives exposing (Primitive)
-import AFrame.Components.Primitives as Primitive exposing (toString)
+import AFrame.Variants.Primitive exposing (Primitive)
+import AFrame.Variants.Primitive as Primitive exposing (toString)
 import AFrame.Util exposing (..)
 
 import AFrame.Components.Geometry.Box as G exposing (..)

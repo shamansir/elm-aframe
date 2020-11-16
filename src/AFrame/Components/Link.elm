@@ -1,4 +1,28 @@
-module AFrame.Components.Link exposing (..)
+module AFrame.Components.Link exposing
+
+    ( href, image, title
+    , backgroundColor, borderColor, highlightedColor, titleColor
+    , highlighted, peekMode, visualAspectEnabled
+    , on
+    )
+
+
+{-| # Link
+
+@docs href, image, title
+
+# Colors
+
+@docs backgroundColor, borderColor, highlightedColor, titleColor
+
+# Configuration
+
+@docs highlighted, peekMode, visualAspectEnabled
+
+# Events
+
+@docs on
+-}
 
 
 import Color exposing (Color)

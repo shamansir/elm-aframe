@@ -1,4 +1,38 @@
-module AFrame.Components.Animations exposing (..)
+module AFrame.Components.Animations exposing
+
+    ( enabled, type_, property, isRawProperty
+    , from, fromBool, fromColor, fromVec3
+    , to, toBool, toColor, toVec3
+    , delay, dir, dur, fill
+    , easing, elasticity
+    , autoplay, loop, loopForever, repeat, repeatForever
+    , startEvents, pauseEvents, resumeEvents
+    )
+
+{-| # Core
+
+@docs enabled, type_, property, isRawProperty
+
+# Tween
+
+@docs from, fromBool, fromColor, fromVec3, to, toBool, toColor, toVec3, dir
+
+# Easing
+
+@docs easing, elasticity
+
+# Timing
+
+@docs delay, dur, fill
+
+# Repeat
+
+@docs loop, loopForever, repeat, repeatForever
+
+# Events
+
+@docs autoplay, startEvents, pauseEvents, resumeEvents
+-}
 
 
 import AFrame.Properties as P exposing (Property, property)
@@ -13,6 +47,7 @@ import AFrame.Variants.Easing as Easing exposing (toString)
 import AFrame.EventRefs exposing (EventRef)
 import AFrame.EventRefs as EventRefs exposing (stringify)
 import AFrame.Util exposing (..)
+import AFrame.Animations exposing (easing)
 
 
 {-| Property to animate. Can be a component name, a dot-delimited property of a component (e.g., `material.color`), or a plain attribute.

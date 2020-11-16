@@ -1,4 +1,23 @@
-module AFrame.Components.Fog exposing (..)
+module AFrame.Components.Fog exposing
+
+    ( type_, color
+    , near, far, density
+    )
+
+
+{-| # Fog
+
+@docs type_, color
+
+# Linear
+
+@docs near, far
+
+# Exponential
+
+@docs density
+-}
+
 
 import Color exposing (Color)
 

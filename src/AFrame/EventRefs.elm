@@ -28,8 +28,6 @@ Use `EventRef`s to reference the events on animation etc.
 
 To actually listen for events and produce messages in response, use `on : EventRef -> Decoder msg -> Attribute msg` from `AFrame.Events`.
 
-# Construction
-
 @docs EventRef, ref
 
 # Animation

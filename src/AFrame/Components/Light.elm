@@ -1,4 +1,34 @@
-module AFrame.Components.Light exposing (..)
+module AFrame.Components.Light exposing
+
+    ( type_, color, groundColor
+    , target, distance, angle
+    , intensity, decay, penumbra
+    , castShadow
+    )
+
+{-| # Light
+
+@docs type_
+
+# Colors
+
+@docs color, groundColor
+
+# Rotation
+
+@docs target, distance, angle
+
+# Characteristics
+
+@docs intensity, decay, penumbra
+
+# Shadow
+
+See `AFrame.Components.Shadow` for shadow properties
+
+@docs castShadow
+
+-}
 
 
 import Color exposing (Color)

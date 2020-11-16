@@ -1,4 +1,15 @@
-module AFrame.Components.Line exposing (..)
+module AFrame.Components.Line exposing
+
+    ( color
+    , start, end
+    , visible, opacity
+    )
+
+
+{-| # Line
+
+@docs color, start, end, opacity, visible
+-}
 
 
 import Color exposing (Color)

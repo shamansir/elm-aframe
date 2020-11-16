@@ -1,4 +1,16 @@
-module AFrame.Components.Camera exposing (..)
+module AFrame.Components.Camera exposing
+
+    ( active
+    , near, far
+    , fov
+    , spectator, zoom
+    )
+
+
+{-| # Camera
+
+@docs active, near, far, fov, spectator, zoom
+-}
 
 
 import AFrame.Properties exposing (Property, property)

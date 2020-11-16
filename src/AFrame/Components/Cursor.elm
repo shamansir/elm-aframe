@@ -1,4 +1,23 @@
-module AFrame.Components.Cursor exposing (..)
+module AFrame.Components.Cursor exposing
+
+    ( fuse, fuseTimeout, rayOrigin
+    , downEvents, upEvents
+    , mouseCursorStylesEnabled
+    )
+
+
+{-| # Cursor
+
+@docs fuse, fuseTimeout, rayOrigin
+
+# Events
+
+@docs downEvents, upEvents
+
+# Style
+
+@docs mouseCursorStylesEnabled
+-}
 
 
 import AFrame.Properties exposing (Property, property)
