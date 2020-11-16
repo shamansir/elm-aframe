@@ -8,7 +8,7 @@ Updated to Elm 0.19 and the latest A-Frame (1.0.4) by [`@shamansir`](https://git
 
 Expanded with `Components` and `Property` concepts by [`@shamansir`](https://github.com/shamansir). Moved here all the exising components/properties and furnished them with types as well. Event-handling is driven by decoders for now, but most of the existing events are present in `EventRefs` module. Also left the places for future extension where possible.
 
-There is a huge amount of code, mostly driven by (but not only) very concentrated copy-pasting. Still human mind can miss some things in such amounts. So please report errors if you find ones, or fork-and-fix if they become stale.
+There is a huge amount of code, mostly driven by (but not only) very concentrated copy-pasting. Still human mind can miss some things in such amounts. For such cases there is always a fallback exists here whenever possible. But anyway for future good please report errors if you find ones, or fork-and-fix if they become stale.
 
 ## Tutorials
 

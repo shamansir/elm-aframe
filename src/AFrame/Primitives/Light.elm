@@ -21,8 +21,8 @@ import Html exposing (node, Html, Attribute)
 import Html.Attributes exposing (attribute)
 
 
-import AFrame.Light exposing (Light)
-import AFrame.Light as Light exposing (toString)
+import AFrame.Variants.Light exposing (Light)
+import AFrame.Variants.Light as Light exposing (toString)
 
 
 
