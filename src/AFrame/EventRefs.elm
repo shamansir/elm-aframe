@@ -1,18 +1,151 @@
-module AFrame.EventRefs exposing (..)
+module AFrame.EventRefs exposing
+
+    ( EventRef, ref, toString, stringify
+    , animationBegin, animationComplete, animationCompleteWithId
+    , deviceOrientationPermissionGranted, deviceOrientationPermissionRejected, deviceOrientationPermissionRequested
+    , modelLoaded, modelError, materialTextureLoaded, materialVideoLoadedData, materialVideoEnded
+    , raycasterIntersected, raycasterIntersectedCleared, raycasterIntersection, raycasterIntersectionCleared
+    , soundLoaded, soundEnded, textFontSet
+    , click, fusing, mouseDown, mouseEnter, mouseLeave, mouseUp
+    , trackPadDown, trackPadUp, trackPadTouchStart, trackPadTouchEnd, trackPadChanged, trackPadMoved
+    , triggerDown, triggerUp, triggerTouchStart, triggerTouchEnd, triggerChanged--, triggerMoved
+    , thumbstickDown, thumbstickUp, thumbstickTouchStart, thumbstickTouchEnd, thumbstickChanged, thumbstickMoved
+    , buttonDown, buttonUp, buttonChanged, touchStart, touchEnd
+    , aButtonDown, aButtonUp, aButtonTouchStart, aButtonTouchEnd, aButtonChanged
+    , bButtonDown, bButtonUp, bButtonTouchStart, bButtonTouchEnd, bButtonChanged
+    , xButtonDown, xButtonUp, xButtonTouchStart, xButtonTouchEnd, xButtonChanged
+    , yButtonDown, yButtonUp, yButtonTouchStart, yButtonTouchEnd, yButtonChanged
+    , surfaceDown, surfaceUp, surfaceTouchStart, surfaceTouchEnd, surfaceChanged
+    , gripDown, gripUp, gripTouchStart, gripTouchEnd, gripChanged
+    , menuDown, menuUp, menuChanged, systemDown, systemUp, systemChanged
+    , pointUp, pointDown, thumbUp, thumbDown, pointingStart, pointingEnd, pistolStart, pistolEnd
+    , axisMove, controllerConnected, controllerDisconnected, controllerModelReady
+    )
+
+{-| # Event Reference
+
+Use `EventRef`s to reference the events on animation etc.
+
+To actually listen for events and produce messages in response, use `on : EventRef -> Decoder msg -> Attribute msg` from `AFrame.Events`.
+
+# Construction
+
+@docs EventRef, ref
+
+# Animation
+
+@docs animationBegin, animationComplete, animationCompleteWithId
+
+# Model
+
+@docs modelLoaded, modelError
+
+# Material
+
+@docs materialTextureLoaded, materialVideoLoadedData, materialVideoEnded
+
+# Raycaster
+
+@docs raycasterIntersected, raycasterIntersectedCleared, raycasterIntersection, raycasterIntersectionCleared
+
+# Text
+
+@docs textFontSet
+
+# Sound
+
+@docs soundLoaded, soundEnded
+
+# Device Orientation
+
+@docs deviceOrientationPermissionGranted, deviceOrientationPermissionRejected, deviceOrientationPermissionRequested
+
+# Controls : Cursor & Mouse
+
+@docs click, fusing, mouseDown, mouseEnter, mouseLeave, mouseUp
+
+# Controls : Generic Button
+
+@docs buttonDown, buttonUp, buttonChanged
+
+# Controls : Generic Touch
+
+@docs touchStart, touchEnd
+
+# Controls : Trackpad
+
+@docs trackPadDown, trackPadUp, trackPadTouchStart, trackPadTouchEnd, trackPadChanged, trackPadMoved
+
+# Controls : Trigger
+
+@docs triggerDown, triggerUp, triggerTouchStart, triggerTouchEnd, triggerChanged
+
+# Controls : Thumbstick
+
+@docs thumbstickDown, thumbstickUp, thumbstickTouchStart, thumbstickTouchEnd, thumbstickChanged, thumbstickMoved
+
+# Controls : Grip
+
+@docs gripDown, gripUp, gripTouchStart, gripTouchEnd, gripChanged
+
+# Controls : A Button
+
+@docs aButtonDown, aButtonUp, aButtonTouchStart, aButtonTouchEnd, aButtonChanged
+
+# Controls : B Button
+
+@docs bButtonDown, bButtonUp, bButtonTouchStart, bButtonTouchEnd, bButtonChanged
+
+# Controls : X Button
+
+@docs xButtonDown, xButtonUp, xButtonTouchStart, xButtonTouchEnd, xButtonChanged
+
+# Controls : Y Button
+
+@docs yButtonDown, yButtonUp, yButtonTouchStart, yButtonTouchEnd, yButtonChanged
+
+# Controls : Surface
+
+@docs surfaceDown, surfaceUp, surfaceTouchStart, surfaceTouchEnd, surfaceChanged
+
+# Controls : Menu
+
+@docs menuDown, menuUp, menuChanged
+
+# Controls : System
+
+@docs systemDown, systemUp, systemChanged
+
+# Controls : Fingers
+
+@docs pointUp, pointDown, thumbUp, thumbDown, pointingStart, pointingEnd, pistolStart, pistolEnd
+
+# Controls : Axis
+
+@docs axisMove
+
+# Controller
+
+@docs controllerConnected, controllerDisconnected, controllerModelReady
+
+-}
 
 
+{-| -}
 type EventRef = EventRef String
 
 
+{-| -}
 toString : EventRef -> String
 toString (EventRef id) = id
 
 
+{-| -}
 stringify : List EventRef -> String
 stringify = List.map toString >> String.join ","
 
 
-{-| Constructor for custom events. -}
+{-| Constructor for custom events' references. -}
 ref : String -> EventRef
 ref = EventRef
 
