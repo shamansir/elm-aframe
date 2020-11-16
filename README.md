@@ -6,6 +6,10 @@ Written by [`@halfzebra`](https://github.com/halfzebra).
 
 Updated to Elm 0.19 and the latest A-Frame (1.0.4) by [`@shamansir`](https://github.com/shamansir).
 
+Expanded with `Components` and `Property` concepts by [`@shamansir`](https://github.com/shamansir). Moved here all the exising components/properties and furnished them with types as well. Event-handling is driven by decoders for now, but most of the existing events are present in `EventRefs` module. Also left the places for future extension where possible.
+
+There is a huge amount of code, mostly driven by (but not only) very concentrated copy-pasting. Still human mind can miss some things in such amounts. So please report errors if you find ones, or fork-and-fix if they become stale.
+
 ## Tutorials
 
 [Simple VR with Elm and A-Frame](https://github.com/tilmans/elm-aframe-example) by [@tilmans](https://github.com/tilmans)

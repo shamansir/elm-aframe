@@ -64,12 +64,14 @@ type ControlSubject
     | Trigger
     | Thumbstick
     | Grip
+    | Button -- any button
     | AButton
     | BButton
     | XButton
     | YButton
     | Surface
-
+    | Menu
+    | System
 
 
 type ControlAction
@@ -90,11 +92,14 @@ control subj action =
         Trigger -> "trigger"
         Thumbstick -> "thumbstick"
         Grip -> "grip"
+        Button -> "button"
         AButton -> "abutton"
         BButton -> "bbutton"
         XButton -> "xbutton"
         YButton -> "ybutton"
         Surface -> "surface"
+        Menu -> "menu"
+        System -> "system"
     )
     ++ (case action of
         Down -> "down"
@@ -168,6 +173,10 @@ thumbstickTouchEnd = control Thumbstick TouchEnd
 
 {-| -}
 thumbstickChanged = control Thumbstick Changed
+
+
+{-| -}
+thumbstickMoved = control Thumbstick Moved
 
 
 {-| -}
@@ -270,8 +279,6 @@ surfaceTouchEnd = control Surface TouchEnd
 surfaceChanged = control Surface Changed
 
 
-
-
 {- hand-controls -}
 
 
@@ -325,6 +332,73 @@ pistolStart = EventRef "pistolstart"
 
 {-| The hand is no longer pointing with thumb raised. -}
 pistolEnd = EventRef "pistolend"
+
+
+{- tracked-controls -}
+
+
+{-| Axis changed (e.g., for thumbstick, touchpad). Contains `axis` and `axesChanged` in the event detail. `axis` is an array of values from `-1.0` (left, down) to `1.0` (right, up). -}
+axisMove = EventRef "axismove"
+
+
+{-| Controller disconnected. -}
+controllerDisconnected = EventRef "controllerdisconnected"
+
+
+{-| Controller connected and set up. -}
+controllerConnected = EventRef "controllerconnected"
+
+
+{-| -}
+buttonDown = control Button Down
+
+
+{-| -}
+buttonUp = control Button Up
+
+
+{-| Any touch or press of a button fires this. -}
+buttonChanged = control Button Changed
+
+
+{-| Touch sensitive button touched. -}
+touchStart = EventRef "touchstart"
+
+
+{-| Touch sensitive button released. -}
+touchEnd = EventRef "touchend"
+
+
+{- vive-controls -}
+
+
+{-| -}
+menuDown = control Menu Down
+
+
+{-| -}
+menuUp = control Menu Up
+
+
+{-| -}
+menuChanged = control Menu Changed
+
+
+{-| -}
+systemDown = control System Down
+
+
+{-| -}
+systemUp = control System Up
+
+
+{-| -}
+systemChanged = control System Changed
+
+
+{-| The model file is loaded and completed parsing. -}
+controllerModelReady = EventRef "controllermodelready"
+
 
 
 {- device-orientation-ui -}

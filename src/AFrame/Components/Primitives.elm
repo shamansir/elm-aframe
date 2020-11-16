@@ -5,8 +5,8 @@ type Primitive = Primitive String
 
 
 
-custom : String -> Primitive
-custom = Primitive
+primitive : String -> Primitive
+primitive = Primitive
 
 
 box : Primitive
