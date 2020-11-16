@@ -1,12 +1,9 @@
 {
     "type": "package",
     "name": "shamansir/elm-aframe",
-    "license": "MIT",
     "summary": "Elm integration for A-Frame",
+    "license": "MIT",
     "version": "1.0.0",
-    "source-directories": [
-        "src"
-    ],
     "exposed-modules": [
         "AFrame",
         "AFrame.Animations",
@@ -23,6 +20,7 @@
         "elm/browser": "1.0.2 <= v < 2.0.0",
         "elm/core": "1.0.5 <= v < 2.0.0",
         "elm/html": "1.0.0 <= v < 2.0.0",
+        "elm/json": "1.1.3 <= v < 2.0.0",
         "noahzgordon/elm-color-extra": "1.0.2 <= v < 2.0.0"
     },
     "test-dependencies": {

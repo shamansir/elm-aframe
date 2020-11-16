@@ -5,7 +5,7 @@ type EventRef = EventRef String
 
 
 toString : EventRef -> String
-toString (EventRef name) = name
+toString (EventRef id) = id
 
 
 stringify : List EventRef -> String
