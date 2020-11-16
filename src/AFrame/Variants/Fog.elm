@@ -1,6 +1,23 @@
-module AFrame.Variants.Fog exposing (..)
+module AFrame.Variants.Fog exposing
+
+    ( Fog
+    , linear, exponential
+    , toString
+    )
+
+{-| # Fog
+
+@docs Fog
+
+# Values
+
+@docs linear, exponential
+
+@docs toString
+-}
 
 
+{-| -}
 type Fog
     = Linear
     | Exponential
@@ -16,6 +33,7 @@ exponential : Fog
 exponential = Exponential
 
 
+{-| -}
 toString : Fog -> String
 toString fog =
     case fog of

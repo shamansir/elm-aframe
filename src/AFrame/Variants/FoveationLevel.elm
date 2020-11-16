@@ -1,6 +1,23 @@
-module AFrame.Variants.FoveationLevel exposing (..)
+module AFrame.Variants.FoveationLevel exposing
+
+    ( FoveationLevel
+    , none, low, medium, high
+    , toInt
+    )
+
+{-| # FoveationLevel
+
+@docs FoveationLevel
+
+# Values
+
+@docs none, low, medium, high
+
+@docs toInt
+-}
 
 
+{-| -}
 type FoveationLevel
     = None
     | Low
@@ -8,18 +25,23 @@ type FoveationLevel
     | High
 
 
+{-| -}
 none = None
 
 
+{-| -}
 low = Low
 
 
+{-| -}
 medium = Medium
 
 
+{-| -}
 high = High
 
 
+{-| -}
 toInt : FoveationLevel -> Int
 toInt foveation =
     case foveation of

@@ -1,4 +1,23 @@
-module AFrame.Properties exposing (..)
+module AFrame.Properties exposing
+
+    ( Property, property
+    , toString
+    )
+
+
+{-| # Property
+
+Property of a component
+
+# Construcion
+
+@docs Property, property
+
+# Conversion
+
+@docs toString
+
+-}
 
 
 import Html exposing (Attribute)

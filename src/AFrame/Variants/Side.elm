@@ -1,21 +1,42 @@
-module AFrame.Variants.Side exposing (..)
+module AFrame.Variants.Side exposing
+
+    ( Side
+    , front, back, double
+    , toString
+    )
+
+{-| # Side
+
+@docs Side
+
+# Values
+
+@docs front, back, double
+
+@docs toString
+-}
 
 
+{-| -}
 type Side
     = Front
     | Back
     | Double
 
 
+{-| -}
 front = Front
 
 
+{-| -}
 back = Back
 
 
+{-| -}
 double = Double
 
 
+{-| -}
 toString : Side -> String
 toString side =
     case side of
