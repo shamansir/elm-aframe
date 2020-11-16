@@ -24,10 +24,12 @@ type Hand
 
 
 {-| -}
+right : Hand
 right = Right
 
 
 {-| -}
+left : Hand
 left = Left
 
 

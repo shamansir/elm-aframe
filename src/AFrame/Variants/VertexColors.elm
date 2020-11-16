@@ -25,14 +25,17 @@ type VertexColors
 
 
 {-| -}
+none : VertexColors
 none = None
 
 
 {-| -}
+vertex : VertexColors
 vertex = Vertex
 
 
 {-| -}
+face : VertexColors
 face = Face
 
 

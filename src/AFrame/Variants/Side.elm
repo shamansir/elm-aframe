@@ -25,14 +25,17 @@ type Side
 
 
 {-| -}
+front : Side
 front = Front
 
 
 {-| -}
+back : Side
 back = Back
 
 
 {-| -}
+double : Side
 double = Double
 
 

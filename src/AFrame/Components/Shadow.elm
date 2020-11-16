@@ -32,7 +32,7 @@ See `AFrame.Components.Light` for corresponding light component.
 
 # Configuration
 
-@docs autoUpdate, enabled
+@docs shadowBias, autoUpdate, enabled
 -}
 
 

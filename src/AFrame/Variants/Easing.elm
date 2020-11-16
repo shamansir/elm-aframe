@@ -4,6 +4,7 @@ module AFrame.Variants.Easing exposing
     , easeInQuad, easeInCubic, easeInQuart, easeInQuint, easeInSine, easeInExpo, easeInCirc, easeInBack, easeInElastic
     , easeOutQuad, easeOutCubic, easeOutQuart, easeOutQuint, easeOutSine, easeOutExpo, easeOutCirc, easeOutBack, easeOutElastic
     , easeInOutQuad, easeInOutCubic, easeInOutQuart, easeInOutQuint, easeInOutSine, easeInOutExpo, easeInOutCirc, easeInOutBack, easeInOutElastic
+    , toString
     )
 
 {-| # Easing
@@ -21,6 +22,10 @@ module AFrame.Variants.Easing exposing
 # InOut
 
 @docs easeInOutQuad, easeInOutCubic, easeInOutQuart, easeInOutQuint, easeInOutSine, easeInOutExpo, easeInOutCirc, easeInOutBack, easeInOutElastic
+
+# Stringify
+
+@docs toString
 -}
 
 

@@ -26,18 +26,22 @@ type FoveationLevel
 
 
 {-| -}
+none : FoveationLevel
 none = None
 
 
 {-| -}
+low : FoveationLevel
 low = Low
 
 
 {-| -}
+medium : FoveationLevel
 medium = Medium
 
 
 {-| -}
+high : FoveationLevel
 high = High
 
 

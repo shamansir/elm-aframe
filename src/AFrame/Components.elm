@@ -66,7 +66,7 @@ module AFrame.Components exposing
 
 # UI and Helpers
 
-@docs loadingScreen, debug, stats, deviceOrientationPersmissionUi, vrModeUi, screenshot
+@docs keyboardShortcuts, loadingScreen, debug, stats, deviceOrientationPersmissionUi, vrModeUi, screenshot
 
 -}
 

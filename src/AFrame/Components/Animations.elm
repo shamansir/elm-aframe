@@ -1,11 +1,11 @@
 module AFrame.Components.Animations exposing
 
     ( enabled, type_, property, isRawProperty
-    , from, fromBool, fromColor, fromVec3
-    , to, toBool, toColor, toVec3
+    , from, fromColor, fromVec2, fromVec3, fromBool, fromValue
+    , to, toColor, toVec2, toVec3, toBool, toValue
     , delay, dir, dur, fill, round
-    , easing, elasticity, round
-    , autoplay, loop, loopForever, repeat, repeatForever
+    , easing, elasticity
+    , autoplay, loop, loopForever
     , startEvents, pauseEvents, resumeEvents
     )
 
@@ -15,7 +15,7 @@ module AFrame.Components.Animations exposing
 
 # Tween
 
-@docs from, fromBool, fromColor, fromVec3, to, toBool, toColor, toVec3, dir
+@docs from, fromBool, fromColor, fromVec2, fromVec3, fromValue, to, toBool, toColor, toVec2, toVec3, toValue, dir
 
 # Easing
 
@@ -27,7 +27,7 @@ module AFrame.Components.Animations exposing
 
 # Repeat
 
-@docs loop, loopForever, repeat, repeatForever
+@docs loop, loopForever
 
 # Events
 
@@ -74,22 +74,34 @@ from : String -> Property
 from = P.property "from"
 
 
-{-|  Initial color at start of animation.
+{-| Initial color at start of animation.
 -}
 fromColor : Color -> Property
 fromColor = from << Color.toCssString
 
 
-{-|  Initial vector at start of animation.
+{-| Initial vector value at end of animation.
+-}
+fromVec2 : Float -> Float -> Property
+fromVec2 x y = from <| vec2ToString x y
+
+
+{-| Initial vector at start of animation.
 -}
 fromVec3 : Float -> Float -> Float -> Property
 fromVec3 x y z = from <| vec3ToString x y z
 
 
-{-|  Initial bool value at start of animation.
+{-| Initial bool value at start of animation.
 -}
 fromBool : Bool -> Property
 fromBool = from << boolToString
+
+
+{-| Initial numeric value at start of animation.
+-}
+fromValue : Float -> Property
+fromValue = from << String.fromFloat
 
 
 {-| Target value at end of animation.
@@ -106,14 +118,26 @@ toColor = to << Color.toCssString
 
 {-| Target vector value at end of animation.
 -}
+toVec2 : Float -> Float -> Property
+toVec2 x y = to <| vec2ToString x y
+
+
+{-| Target vector value at end of animation.
+-}
 toVec3 : Float -> Float -> Float -> Property
 toVec3 x y z = to <| vec3ToString x y z
 
 
-{-| Target color value at end of animation.
+{-| Target bool value at end of animation.
 -}
 toBool : Bool -> Property
 toBool = to << boolToString
+
+
+{-| Target numeric value at end of animation.
+-}
+toValue : Float -> Property
+toValue = to << String.fromFloat
 
 
 {-| Right now only supports color for tweening isRawProperty color XYZ/RGB vector values.
@@ -150,7 +174,7 @@ dur : Int -> Property
 dur = P.property "dur" << String.fromInt
 
 
-{-|	Easing function of animation. To ease in, ease out, ease in and out.
+{-| Easing function of animation. To ease in, ease out, ease in and out.
 -}
 easing : Easing -> Property
 easing = P.property "easing" << Easing.toString
@@ -175,19 +199,6 @@ loop = P.property "loop" << String.fromInt
 {-| -}
 loopForever : Property
 loopForever = P.property "loop" "true"
-
-
-{-| How many times the animation should repeat.
-
-Default : `0`
--}
-repeat : Int -> Property
-repeat = loop
-
-
-{-| -}
-repeatForever : Int -> Property
-repeatForever = loopForever
 
 
 {-| Determines effect of animation when not actively in play.

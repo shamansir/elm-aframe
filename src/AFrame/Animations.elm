@@ -7,10 +7,10 @@ module AFrame.Animations
         , dur
         , easing
         , fill
-        , from
+        , from, fromColor, fromVec2, fromVec3, fromBool, fromValue
         , loop
         , loopForever
-        , to
+        , to, toColor, toVec2, toVec3, toBool, toValue
         )
 
 
@@ -20,13 +20,14 @@ module AFrame.Animations
 @docs animation
 
 # Animation attributes
-@docs attribute_, begin, direction, dur, easing, fill, from, repeat, to
+@docs attribute_, begin, direction, dur, easing, fill, from, fromColor, fromVec2, fromVec3, fromBool, fromValue, to, toColor, toVec2, toVec3, toBool, toValue, loop, loopForever
 
 -}
 
 import Html exposing (node, Html, Attribute)
 import Html.Attributes exposing (attribute)
 
+import Color exposing (Color)
 
 import AFrame.Variants.Fill exposing (Fill)
 import AFrame.Variants.Fill as Fill exposing (toString)
@@ -34,6 +35,7 @@ import AFrame.Variants.Direction exposing (Direction)
 import AFrame.Variants.Direction as Dir exposing (toString)
 import AFrame.Variants.Easing exposing (Easing)
 import AFrame.Variants.Easing as Easing exposing (toString)
+import AFrame.Util exposing (..)
 
 
 {-| Animation declaration.
@@ -120,6 +122,31 @@ from =
     attribute "from"
 
 
+{-| -}
+fromColor : Color -> Attribute msg
+fromColor = from << Color.toCssString
+
+
+{-| -}
+fromVec2 : Float -> Float -> Attribute msg
+fromVec2 x y = from <| vec2ToString x y
+
+
+{-| -}
+fromVec3 : Float -> Float -> Float -> Attribute msg
+fromVec3 x y z = from <| vec3ToString x y z
+
+
+{-| -}
+fromBool : Bool -> Attribute msg
+fromBool = from << boolToString
+
+
+{-| -}
+fromValue : Float -> Attribute msg
+fromValue = from << String.fromFloat
+
+
 {-| Repeat count.
 
     animation [ loop 5000 ] []
@@ -146,3 +173,27 @@ loopForever =
 to : String -> Attribute msg
 to value =
     attribute "to" value
+
+{-| -}
+toColor : Color -> Attribute msg
+toColor = to << Color.toCssString
+
+
+{-| -}
+toVec2 : Float -> Float -> Attribute msg
+toVec2 x y = to <| vec2ToString x y
+
+
+{-| -}
+toVec3 : Float -> Float -> Float -> Attribute msg
+toVec3 x y z = to <| vec3ToString x y z
+
+
+{-| -}
+toBool : Bool -> Attribute msg
+toBool = to << boolToString
+
+
+{-| -}
+toValue : Float -> Attribute msg
+toValue = to << String.fromFloat

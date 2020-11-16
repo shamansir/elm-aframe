@@ -25,14 +25,17 @@ type Precision
 
 
 {-| -}
+low : Precision
 low = Low
 
 
 {-| -}
+medium : Precision
 medium = Medium
 
 
 {-| -}
+high : Precision
 high = High
 
 

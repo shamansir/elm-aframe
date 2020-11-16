@@ -25,14 +25,17 @@ type HandStyle
 
 
 {-| -}
+lowPoly : HandStyle
 lowPoly = LowPoly
 
 
 {-| -}
+highPoly : HandStyle
 highPoly = HighPoly
 
 
 {-| -}
+toon : HandStyle
 toon = Toon
 
 

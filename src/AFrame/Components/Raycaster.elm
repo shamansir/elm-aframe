@@ -18,7 +18,7 @@ module AFrame.Components.Raycaster exposing
 
 # Other
 
-@docs showLine, autoRefresh, enabled
+@docs showLine, autoRefresh, enabled, useWorldCoordinates
 -}
 
 

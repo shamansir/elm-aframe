@@ -24,6 +24,10 @@ module AFrame.Variants.Primitive exposing
 
 @docs cone, cylinder, ring, sphere, torus, torusKnot
 
+# Stringify
+
+@docs toString
+
 -}
 
 
