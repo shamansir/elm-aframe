@@ -1,5 +1,14 @@
-module AFrame.Components.Geometry.Tetrahedron exposing (..)
+module AFrame.Components.Geometry.Tetrahedron exposing
 
+    ( radius
+    )
+
+{-| # Tetrahedron
+
+# Dimensions
+
+@docs radius
+-}
 
 import AFrame.Properties exposing (Property, property)
 

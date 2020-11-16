@@ -1,4 +1,23 @@
-module AFrame.Components.Geometry.Circle exposing (..)
+module AFrame.Components.Geometry.Circle exposing
+
+    ( radius, segments
+    , thetaStart, thetaLength
+    )
+
+{-| # Circle
+
+# Dimensions
+
+@docs radius
+
+# Mesh
+
+@docs segments
+
+# Partial
+
+@docs thetaStart, thetaLength
+-}
 
 
 import AFrame.Properties exposing (Property, property)

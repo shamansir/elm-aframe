@@ -1,4 +1,14 @@
-module AFrame.Components.Geometry.Triangle exposing (..)
+module AFrame.Components.Geometry.Triangle exposing
+
+    ( vertexA, vertexB, vertexC
+    )
+
+{-| # Triangle
+
+# Points
+
+@docs vertexA, vertexB, vertexC
+-}
 
 
 import AFrame.Properties exposing (Property, property)

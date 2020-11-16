@@ -1,4 +1,25 @@
-module AFrame.Components.Geometry.Sphere exposing (..)
+module AFrame.Components.Geometry.Sphere exposing
+
+    ( radius
+    , segmentsWidth, segmentsHeight
+    , phiStart, phiLength
+    , thetaStart, thetaLength
+    )
+
+{-| # Sphere
+
+# Dimensions
+
+@docs radius
+
+# Mesh
+
+@docs segmentsWidth, segmentsHeight
+
+# Partial
+
+@docs phiStart, phiLength, thetaStart, thetaLength
+-}
 
 
 import AFrame.Properties exposing (Property, property)

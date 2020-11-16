@@ -12,9 +12,6 @@ module AFrame.Primitives.Light
 # Attributes
 @docs type_, intensity
 
-# Types
-@docs Light
-
 -}
 
 import Html exposing (node, Html, Attribute)

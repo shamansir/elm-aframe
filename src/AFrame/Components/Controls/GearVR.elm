@@ -1,4 +1,25 @@
-module AFrame.Components.Controls.GearVR exposing (..)
+module AFrame.Components.Controls.GearVR exposing
+
+    ( hand, armModel, model
+    , buttonColor, buttonTouchedColor, buttonHighlightColor
+    , orientationOffset
+    )
+
+{-| # GearVR Controls
+
+# Basic
+
+@docs hand, armModel, model
+
+# Buttons colors
+
+@docs buttonColor, buttonTouchedColor, buttonHighlightColor
+
+# Orientation
+
+@docs orientationOffset
+
+-}
 
 
 import Color exposing (Color)

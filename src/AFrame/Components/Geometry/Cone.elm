@@ -1,4 +1,25 @@
-module AFrame.Components.Geometry.Cone exposing (..)
+module AFrame.Components.Geometry.Cone exposing
+
+    ( height, radiusTop, radiusBottom
+    , segmentsRadial, segmentsHeight, openEnded
+    , thetaStart, thetaLength
+    )
+
+{-| # Cone
+
+# Dimensions
+
+@docs height, radiusTop, radiusBottom
+
+# Mesh
+
+@docs segmentsRadial, segmentsHeight, openEnded
+
+# Partial
+
+@docs thetaStart, thetaLength
+-}
+
 
 import AFrame.Properties exposing (Property, property)
 import AFrame.Util exposing (..)

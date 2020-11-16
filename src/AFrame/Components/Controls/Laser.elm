@@ -1,4 +1,12 @@
-module AFrame.Components.Controls.Laser exposing (..)
+module AFrame.Components.Controls.Laser exposing
+
+    ( hand, model, defaultModelColor
+    )
+
+{-| # Laser Controls
+
+@docs hand, model, defaultModelColor
+-}
 
 
 import Color exposing (Color)

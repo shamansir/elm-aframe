@@ -1,4 +1,14 @@
-module AFrame.Components.Geometry.Dodecahedron exposing (..)
+module AFrame.Components.Geometry.Dodecahedron exposing
+
+    ( radius
+    )
+
+{-| # Dodecahedron
+
+# Dimensions
+
+@docs radius
+-}
 
 
 import AFrame.Properties exposing (Property, property)

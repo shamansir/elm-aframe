@@ -57,7 +57,7 @@
         "AFrame.Components.Geometry.Circle",
         "AFrame.Components.Geometry.Cone",
         "AFrame.Components.Geometry.Cylinder",
-        "AFrame.Components.Geometry.Dedecahedron",
+        "AFrame.Components.Geometry.Dodecahedron",
         "AFrame.Components.Geometry.Octahedron",
         "AFrame.Components.Geometry.Plane",
         "AFrame.Components.Geometry.Ring",

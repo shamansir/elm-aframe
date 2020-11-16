@@ -1,4 +1,14 @@
-module AFrame.Components.Geometry.Octahedron exposing (..)
+module AFrame.Components.Geometry.Octahedron exposing
+
+    ( radius
+    )
+
+{-| # Octahedron
+
+# Dimensions
+
+@docs radius
+-}
 
 
 import AFrame.Properties exposing (Property, property)

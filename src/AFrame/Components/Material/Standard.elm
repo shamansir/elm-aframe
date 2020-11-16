@@ -1,4 +1,58 @@
-module AFrame.Components.Material.Standard exposing (..)
+module AFrame.Components.Material.Standard exposing
+
+    ( src
+    , width, height
+    , color, fog, wireframe, wireframeLinewidth
+    , repeat
+    , emissive, emissiveIntensity, metalness, roughness
+    , ambientOcclusionMap, ambientOcclusionMapIntensity
+    , ambientOcclusionTextureRepeat, ambientOcclusionTextureOffset
+    , displacementMap, displacementScale, displacementBias
+    , displacementTextureRepeat, displacementTextureOffset
+    , envMap, sphericalEnvMap
+    , normalMap, normalScale
+    , normalTextureRepeat, normalTextureOffset
+    )
+
+{-| # Standard Material
+
+# Source
+
+@docs src
+
+# Dimensions
+
+@docs width, height
+
+# Look
+
+@docs color, fog, wireframe, wireframeLinewidth
+
+# Repeat
+
+@docs repeat
+
+# Сharacteristics
+
+@docs emissive, emissiveIntensity, metalness, roughness
+
+# Ambient Occlusion
+
+@docs ambientOcclusionMap, ambientOcclusionMapIntensity, ambientOcclusionTextureRepeat, ambientOcclusionTextureOffset
+
+# Displacement Map
+
+@docs displacementMap, displacementScale, displacementBias, displacementTextureRepeat, displacementTextureOffset
+
+# Environment Map
+
+@docs envMap, sphericalEnvMap
+
+# Normal Map
+
+@docs normalMap, normalScale, normalTextureRepeat, normalTextureOffset
+
+-}
 
 
 import Color exposing (Color)

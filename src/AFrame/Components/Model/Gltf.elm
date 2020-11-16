@@ -1,4 +1,12 @@
-module AFrame.Components.Model.Gltf exposing (..)
+module AFrame.Components.Model.Gltf exposing
+
+    ( dracoDecoderPath
+    )
+
+{-| # GLTF Model
+
+@docs dracoDecoderPath
+-}
 
 
 import AFrame.Properties exposing (Property, property)

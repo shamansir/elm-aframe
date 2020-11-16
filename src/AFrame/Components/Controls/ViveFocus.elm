@@ -1,4 +1,25 @@
-module AFrame.Components.Controls.ViveFocus exposing (..)
+module AFrame.Components.Controls.ViveFocus exposing
+
+    ( hand, armModel, model
+    , buttonTouchedColor, buttonHighlightColor
+    , orientationOffset
+    )
+
+{-| # Oculus Go Controls
+
+# Basic
+
+@docs hand, armModel, model
+
+# Buttons colors
+
+@docs buttonTouchedColor, buttonHighlightColor
+
+# Orientation
+
+@docs orientationOffset
+
+-}
 
 
 import Color exposing (Color)

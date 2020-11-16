@@ -1,4 +1,25 @@
-module AFrame.Components.Geometry.Cylinder exposing (..)
+module AFrame.Components.Geometry.Cylinder exposing
+
+    ( radius, height
+    , segmentsRadial, segmentsHeight, openEnded
+    , thetaStart, thetaLength
+    )
+
+{-| # Cylinder
+
+# Dimensions
+
+@docs radius, height
+
+# Mesh
+
+@docs segmentsRadial, segmentsHeight, openEnded
+
+# Partial
+
+@docs thetaStart, thetaLength
+-}
+
 
 import AFrame.Properties exposing (Property, property)
 import AFrame.Util exposing (..)

@@ -1,4 +1,19 @@
-module AFrame.Components.Controls.WindowsMotion exposing (..)
+module AFrame.Components.Controls.WindowsMotion exposing
+
+    ( hand, model, hideDisconnected
+    , pair
+    )
+
+{-| # Windows Motion Controls
+
+# Basic
+
+@docs hand, model, hideDisconnected
+
+# Controllers
+
+@docs pair
+-}
 
 
 import Color exposing (Color)

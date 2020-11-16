@@ -1,4 +1,15 @@
-module AFrame.Components.Controls.Look exposing (..)
+module AFrame.Components.Controls.Look exposing
+
+    ( enabled, hmdEnabled, touchEnabled
+    , reverseMouseDrag, reverseTouchDrag
+    , pointerLockEnabled
+    )
+
+{-| # Look Controls
+
+@docs enabled, hmdEnabled, touchEnabled, pointerLockEnabled, reverseMouseDrag, reverseTouchDrag
+-}
+
 
 
 import AFrame.Properties exposing (Property, property)

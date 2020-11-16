@@ -1,5 +1,24 @@
-module AFrame.Components.Geometry.Ring exposing (..)
+module AFrame.Components.Geometry.Ring exposing
 
+    ( radiusInner, radiusOuter
+    , segmentsTheta, segmentsPhi
+    , thetaStart, thetaLength
+    )
+
+{-| # Ring
+
+# Dimensions
+
+@docs radiusInner, radiusOuter
+
+# Mesh
+
+@docs segmentsTheta, segmentsPhi
+
+# Partial
+
+@docs thetaStart, thetaLength
+-}
 
 import AFrame.Properties exposing (Property, property)
 

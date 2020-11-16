@@ -1,4 +1,25 @@
-module AFrame.Components.Controls.Vive exposing (..)
+module AFrame.Components.Controls.Vive exposing
+
+    ( hand, model
+    , buttonColor, buttonHighlightColor
+    , orientationOffset
+    )
+
+{-| # Vive Controls
+
+# Basic
+
+@docs hand,  model
+
+# Buttons colors
+
+@docs buttonColor, buttonHighlightColor
+
+# Orientation
+
+@docs orientationOffset
+
+-}
 
 
 import Color exposing (Color)

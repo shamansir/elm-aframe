@@ -1,4 +1,19 @@
-module AFrame.Components.Controls.Wasd exposing (..)
+module AFrame.Components.Controls.Wasd exposing
+
+    ( enabled, acceleration, fly
+    , adAxis, wsAxis, adInverted, wsInverted
+    )
+
+{-| # WSAD Controls
+
+# Basic
+
+@docs enabled, acceleration, fly
+
+# Axes
+
+@docs adAxis, wsAxis, adInverted, wsInverted
+-}
 
 
 import AFrame.Properties exposing (Property, property)

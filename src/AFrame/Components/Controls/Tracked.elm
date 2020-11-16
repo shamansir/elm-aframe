@@ -1,4 +1,26 @@
-module AFrame.Components.Controls.Tracked exposing (..)
+module AFrame.Components.Controls.Tracked exposing
+
+    ( hand, armModel, headModel
+    , autoHide
+    , controller, id, idPrefix
+    , orientationOffset
+    )
+
+{-| # Tracked Controls
+
+# Basic
+
+@docs hand, armModel, headModel, autoHide
+
+# Controller
+
+@docs controller, id, idPrefix
+
+# Orientation
+
+@docs orientationOffset
+
+-}
 
 
 import AFrame.Variants.Hand exposing (Hand)
@@ -37,7 +59,6 @@ Default : `0`
 -}
 controller : Int -> Property
 controller = property "controller" << String.fromInt
-
 
 
 {-| Selects the controller from the Gamepad API using exact match.

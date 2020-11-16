@@ -1,4 +1,20 @@
-module AFrame.Components.Geometry.Plane exposing (..)
+module AFrame.Components.Geometry.Plane exposing
+
+    ( width, height
+    , segmentsWidth, segmentsHeight
+    )
+
+{-| # Plane
+
+# Dimensions
+
+@docs width, height
+
+# Mesh
+
+@docs segmentsWidth, segmentsHeight
+-}
+
 
 import AFrame.Properties exposing (Property, property)
 

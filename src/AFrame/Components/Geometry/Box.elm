@@ -1,4 +1,19 @@
-module AFrame.Components.Geometry.Box exposing (..)
+module AFrame.Components.Geometry.Box exposing
+
+    ( width, height, depth
+    , segmentsWidth, segmentsHeight, segmentsDepth
+    )
+
+{-| # Box
+
+# Dimensions
+
+@docs width, height, depth
+
+# Mesh
+
+@docs segmentsWidth, segmentsHeight, segmentsDepth
+-}
 
 
 import AFrame.Properties exposing (Property, property)

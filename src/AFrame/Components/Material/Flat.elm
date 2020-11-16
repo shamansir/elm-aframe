@@ -1,4 +1,25 @@
-module AFrame.Components.Material.Flat exposing (..)
+module AFrame.Components.Material.Flat exposing
+
+    ( src
+    , width, height
+    , color, fog, wireframe, wireframeLinewidth
+    )
+
+{-| # Flat Material
+
+# Source
+
+@docs src
+
+# Dimensions
+
+@docs width, height
+
+# Look
+
+@docs color, fog, wireframe, wireframeLinewidth
+
+-}
 
 
 import Color exposing (Color)

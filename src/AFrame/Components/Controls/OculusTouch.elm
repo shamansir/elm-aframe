@@ -1,4 +1,19 @@
-module AFrame.Components.Controls.OculusTouch exposing (..)
+module AFrame.Components.Controls.OculusTouch exposing
+
+    ( hand, model, orientationOffset
+    )
+
+{-| # Oculus Touch Controls
+
+# Basic
+
+@docs hand, model
+
+# Orientation
+
+@docs orientationOffset
+
+-}
 
 
 import Color exposing (Color)

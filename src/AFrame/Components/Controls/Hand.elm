@@ -1,4 +1,12 @@
-module AFrame.Components.Controls.Hand exposing (..)
+module AFrame.Components.Controls.Hand exposing
+
+    ( hand, handModelStyle, color
+    )
+
+{-| # Hand Controls
+
+@docs hand, handModelStyle, color
+-}
 
 
 import Color exposing (Color)

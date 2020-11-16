@@ -1,4 +1,24 @@
-module AFrame.Components.Geometry.TorusKnot exposing (..)
+module AFrame.Components.Geometry.TorusKnot exposing
+
+    ( radius, radiusTubular
+    , segmentsRadial, segmentsTubular
+    , p, q
+    )
+
+{-| # TorusKnot
+
+# Dimensions
+
+@docs radius, radiusTubular
+
+# Mesh
+
+@docs segmentsRadial, segmentsTubular
+
+# Partial
+
+@docs p, q
+-}
 
 
 import AFrame.Properties exposing (Property, property)

@@ -1,4 +1,30 @@
-module AFrame.Components.Controls.Daydream exposing (..)
+module AFrame.Components.Controls.Daydream exposing
+
+    ( hand, armModel, model
+    , buttonColor, buttonTouchedColor, buttonHighlightColor
+    , orientationOffset
+    )
+
+{-| The `daydream-controls` component interfaces with the Google Daydream controllers. It wraps the `tracked-controls` component while adding button mappings, events, and a Daydream controller model that highlights the touched and/or pressed buttons (trackpad).
+
+As a first time set up, to use the Daydream controller on Chrome for Android enable both `WebVR` and `Gamepad` Extensions experiments in `chrome://flags` and relaunch the browser.
+
+Then, open your web app, enter VR mode and place the phone inside the headset. It can occassionally take a few seconds before the controller can be used.
+
+# Basic
+
+@docs hand, armModel, model
+
+# Buttons colors
+
+@docs buttonColor, buttonTouchedColor, buttonHighlightColor
+
+# Orientation
+
+@docs orientationOffset
+
+-}
+
 
 import Color exposing (Color)
 

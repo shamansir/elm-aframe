@@ -1,4 +1,24 @@
-module AFrame.Components.Geometry.Torus exposing (..)
+module AFrame.Components.Geometry.Torus exposing
+
+    ( radius, radiusTubular
+    , segmentsRadial, segmentsTubular
+    , arc
+    )
+
+{-| # Torus
+
+# Dimensions
+
+@docs radius, radiusTubular
+
+# Mesh
+
+@docs segmentsRadial, segmentsTubular
+
+# Partial
+
+@docs arc
+-}
 
 
 import AFrame.Properties exposing (Property, property)
